@@ -23,7 +23,7 @@ a simple system for managing user TimeTable
 localhost/admin/login
 Admins's credentials: user@user.com - 123456
 --------------------------------------------------
-localhost//login
+localhost/login
 User's credentials: admin@admin.com - 123456
 --------------------------------------------------
 ## requirements
