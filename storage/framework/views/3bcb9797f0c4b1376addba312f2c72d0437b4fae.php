@@ -15,9 +15,6 @@
                 <?php endif; ?>
             </li>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-
         </ol>
     </nav>
 </div><?php /**PATH /Users/a/Desktop/timetable/resources/views/dashboard/partials/breadcrumbs.blade.php ENDPATH**/ ?>

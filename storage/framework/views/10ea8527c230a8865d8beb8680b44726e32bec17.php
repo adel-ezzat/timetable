@@ -1,14 +1,13 @@
-@extends('layouts.app')
-@section('styles')
-<link rel="stylesheet" href="{{ asset('assets/vendors/timetable/timetablejs.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/select2/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/modern-vertical/style.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/timetable/demo.css') }}">
+<?php $__env->startSection('styles'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/timetable/timetablejs.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/select2/select2.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/mdi/css/materialdesignicons.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/modern-vertical/style.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/vendors/timetable/demo.css')); ?>">
 
 <style>
     .container,
@@ -21,9 +20,9 @@
         padding-left: unset;
     }
 </style>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="col-12 grid-margin stretch-card">
 
     <div class="card">
@@ -65,9 +64,9 @@
                     <div class="form-group">
                         <label class="col-form-label">Pharamcy:</label>
                         <select class="select2" id="pharmacy" style="width:100%">
-                            @foreach ($pharmacies as $pharmacy)
-                            <option value="{{ $pharmacy->id }}">{{ $pharmacy->name }}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $pharmacies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pharmacy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($pharmacy->id); ?>"><?php echo e($pharmacy->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
                 </div>
@@ -89,14 +88,14 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
-<script src="{{ asset('assets/vendors/timetable/timetable.js') }}"></script>
-<script src="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/moment/moment.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js') }}"></script>
-<script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
+<?php $__env->startSection('scripts'); ?>
+<script src="<?php echo e(asset('assets/vendors/timetable/timetable.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/vendors/moment/moment.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/vendors/select2/select2.min.js')); ?>"></script>
 
 <script>
     $('#from').datetimepicker({
@@ -123,7 +122,7 @@
 
         $.ajax({
             type: "post",
-            url: "{{ route('home.generate-time-table') }}",
+            url: "<?php echo e(route('home.generate-time-table')); ?>",
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -160,4 +159,6 @@
         });
     }
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/a/Desktop/timetable/resources/views/user/timetable/index.blade.php ENDPATH**/ ?>
