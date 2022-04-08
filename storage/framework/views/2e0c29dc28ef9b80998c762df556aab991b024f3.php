@@ -103,8 +103,8 @@ unset($__errorArgs, $__bag); ?>
                 <div class="form-group">
                     <label">Role</label>
                         <select class="form-control" name="role_id">
-                            <?php $__currentLoopData = $currentRole; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $id => $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <option value="<?php echo e($id); ?> " selected> <?php echo e($role); ?> </option>
+                            <?php $__currentLoopData = $currentRole; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($role->id); ?> " selected> <?php echo e($role->name); ?> </option>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             <?php $__currentLoopData = $allRolesExceptCurrent; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $id => $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

@@ -63,8 +63,8 @@
                 <div class="form-group">
                     <label">Role</label>
                         <select class="form-control" name="role_id">
-                            @foreach ($currentRole as $id => $role)
-                            <option value="{{ $id }} " selected> {{ $role }} </option>
+                            @foreach ($currentRole as $role)
+                            <option value="{{ $role->id }} " selected> {{ $role->name }} </option>
                             @endforeach
 
                             @foreach ($allRolesExceptCurrent as $id => $role)

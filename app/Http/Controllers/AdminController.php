@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function getCurrentRole($model)
     {
-        return $model->roles->pluck('name', 'id');
+        return $model->roles;
     }
 
     public function index()
@@ -54,7 +54,7 @@ class AdminController extends Controller
     {
         $admin = Admin::find($id);
         $currentRole = $this->getCurrentRole($admin);
-        $allRolesExceptCurrent = Role::whereNotIn('name', [$currentRole[1]])->get();
+        $allRolesExceptCurrent = Role::whereNotIn('name', [$currentRole->first()->name])->get();
         return view('dashboard.admin.edit', compact('admin', 'currentRole', 'allRolesExceptCurrent'));
     }
 
@@ -63,14 +63,14 @@ class AdminController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
-            'password' => 'sometimes|same:password_confirmation',
+            'password' => 'sometimes|same:password _confirmation',
             'role_id' => 'required'
         ]);
 
         $input = $request->all();
         $admin = Admin::find($request->id);
         $admin->update($input);
-        $admin->assignRole($request->input('role_id'));
+        $admin->syncRoles($request->input('role_id'));
 
         return redirect()->route('admin.index');
     }
