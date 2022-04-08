@@ -18,7 +18,11 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Auth::routes();
+Auth::routes([
+'register' => false,
+'reset' => false, 
+'verify' => false, 
+]);
 
 //home route
 Route::get('/', function () {
