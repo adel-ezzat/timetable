@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://is2host.com/albadr-tasks/#/app/tasks/show/2046 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="https://is2host.com/albadr-tasks/favicon.ico"><title>Al-Badr Managment Dashboard</title><meta name="description" content="Free &amp; Open Source Vue.js Admin Dashboard Template built with vue-router, vuex and bootstrap 4"><meta name="keywords" content="vue admin, vue admin template, vue dashboard, free vue.js admin dashboard, open source vue admin dashboard, vue template"><meta name="author" content="Flatlogic LLC"><script type="text/javascript" async="" src="./Al-Badr Managment Dashboard_files/analytics.js"></script><script async="" src="./Al-Badr Managment Dashboard_files/tag.js"></script><script async="" src="./Al-Badr Managment Dashboard_files/js"></script><script src="./Al-Badr Managment Dashboard_files/firebase-app.js"></script><script src="./Al-Badr Managment Dashboard_files/firebase-messaging.js"></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-36759672-9');</script><script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(48020168, "init", { id:48020168, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true, ecommerce:"dataLayer" });</script><link href="./Al-Badr Managment Dashboard_files/app.308a3d96.css" rel="preload" as="style"><link href="./Al-Badr Managment Dashboard_files/chunk-vendors.1cdd7b57.css" rel="preload" as="style"><link href="./Al-Badr Managment Dashboard_files/app.a22d1731.js" rel="preload" as="script"><link href="./Al-Badr Managment Dashboard_files/chunk-vendors.60486e93.js" rel="preload" as="script"><link href="./Al-Badr Managment Dashboard_files/chunk-vendors.1cdd7b57.css" rel="stylesheet"><link href="./Al-Badr Managment Dashboard_files/app.308a3d96.css" rel="stylesheet"><style type="text/css">.toasted{padding:0 20px}.toasted.rounded{border-radius:24px}.toasted .primary,.toasted.toasted-primary{border-radius:2px;min-height:38px;line-height:1.1em;background-color:#353535;padding:6px 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted .primary.success,.toasted.toasted-primary.success{background:#4caf50}.toasted .primary.error,.toasted.toasted-primary.error{background:#f44336}.toasted .primary.info,.toasted.toasted-primary.info{background:#3f51b5}.toasted .primary .action,.toasted.toasted-primary .action{color:#a1c2fa}.toasted.bubble{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#ff7043;padding:0 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted.bubble.success{background:#4caf50}.toasted.bubble.error{background:#f44336}.toasted.bubble.info{background:#3f51b5}.toasted.bubble .action{color:#8e2b0c}.toasted.outline{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#fff;border:1px solid #676767;padding:0 20px;font-size:15px;color:#676767;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-weight:700}.toasted.outline.success{color:#4caf50;border-color:#4caf50}.toasted.outline.error{color:#f44336;border-color:#f44336}.toasted.outline.info{color:#3f51b5;border-color:#3f51b5}.toasted.outline .action{color:#607d8b}.toasted-container{position:fixed;z-index:10000}.toasted-container,.toasted-container.full-width{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.toasted-container.full-width{max-width:86%;width:100%}.toasted-container.full-width.fit-to-screen{min-width:100%}.toasted-container.full-width.fit-to-screen .toasted:first-child{margin-top:0}.toasted-container.full-width.fit-to-screen.top-right{top:0;right:0}.toasted-container.full-width.fit-to-screen.top-left{top:0;left:0}.toasted-container.full-width.fit-to-screen.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.full-width.fit-to-screen.bottom-right{right:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-left{left:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.top-right{top:10%;right:7%}.toasted-container.top-left{top:10%;left:7%}.toasted-container.top-center{top:10%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.toasted-container.bottom-right{right:5%;bottom:7%}.toasted-container.bottom-left{left:5%;bottom:7%}.toasted-container.bottom-center{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:7%}.toasted-container.bottom-left .toasted,.toasted-container.top-left .toasted{float:left}.toasted-container.bottom-right .toasted,.toasted-container.top-right .toasted{float:right}.toasted-container .toasted{top:35px;width:auto;clear:both;margin-top:10px;position:relative;max-width:100%;height:auto;word-break:normal;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;box-sizing:inherit}.toasted-container .toasted .fa,.toasted-container .toasted .fab,.toasted-container .toasted .far,.toasted-container .toasted .fas,.toasted-container .toasted .material-icons,.toasted-container .toasted .mdi{margin-right:.5rem;margin-left:-.4rem}.toasted-container .toasted .fa.after,.toasted-container .toasted .fab.after,.toasted-container .toasted .far.after,.toasted-container .toasted .fas.after,.toasted-container .toasted .material-icons.after,.toasted-container .toasted .mdi.after{margin-left:.5rem;margin-right:-.4rem}.toasted-container .toasted .action{text-decoration:none;font-size:.8rem;padding:8px;margin:5px -7px 5px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:.03em;font-weight:600;cursor:pointer}.toasted-container .toasted .action.icon{padding:4px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}.toasted-container .toasted .action.icon .fa,.toasted-container .toasted .action.icon .material-icons,.toasted-container .toasted .action.icon .mdi{margin-right:0;margin-left:4px}.toasted-container .toasted .action.icon:hover{text-decoration:none}.toasted-container .toasted .action:hover{text-decoration:underline}@media only screen and (max-width:600px){.toasted-container{min-width:100%}.toasted-container .toasted:first-child{margin-top:0}.toasted-container.top-right{top:0;right:0}.toasted-container.top-left{top:0;left:0}.toasted-container.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.bottom-right{right:0;bottom:0}.toasted-container.bottom-left{left:0;bottom:0}.toasted-container.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.bottom-center,.toasted-container.top-center{-ms-flex-align:stretch!important;align-items:stretch!important}.toasted-container.bottom-left .toasted,.toasted-container.bottom-right .toasted,.toasted-container.top-left .toasted,.toasted-container.top-right .toasted{float:none}.toasted-container .toasted{border-radius:0}}</style><style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style><style type="text/css">/*!
+ * Quill Editor v1.3.6
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */.ql-container{box-sizing:border-box;font-family:Helvetica,Arial,sans-serif;font-size:13px;height:100%;margin:0;position:relative}.ql-container.ql-disabled .ql-tooltip{visibility:hidden}.ql-container.ql-disabled .ql-editor ul[data-checked]>li::before{pointer-events:none}.ql-clipboard{left:-100000px;height:1px;overflow-y:hidden;position:absolute;top:50%}.ql-clipboard p{margin:0;padding:0}.ql-editor{box-sizing:border-box;line-height:1.42;height:100%;outline:0;overflow-y:auto;padding:12px 15px;tab-size:4;-moz-tab-size:4;text-align:left;white-space:pre-wrap;word-wrap:break-word}.ql-editor>*{cursor:text}.ql-editor blockquote,.ql-editor h1,.ql-editor h2,.ql-editor h3,.ql-editor h4,.ql-editor h5,.ql-editor h6,.ql-editor ol,.ql-editor p,.ql-editor pre,.ql-editor ul{margin:0;padding:0;counter-reset:list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9}.ql-editor ol,.ql-editor ul{padding-left:1.5em}.ql-editor ol>li,.ql-editor ul>li{list-style-type:none}.ql-editor ul>li::before{content:'\2022'}.ql-editor ul[data-checked=false],.ql-editor ul[data-checked=true]{pointer-events:none}.ql-editor ul[data-checked=false]>li *,.ql-editor ul[data-checked=true]>li *{pointer-events:all}.ql-editor ul[data-checked=false]>li::before,.ql-editor ul[data-checked=true]>li::before{color:#777;cursor:pointer;pointer-events:all}.ql-editor ul[data-checked=true]>li::before{content:'\2611'}.ql-editor ul[data-checked=false]>li::before{content:'\2610'}.ql-editor li::before{display:inline-block;white-space:nowrap;width:1.2em}.ql-editor li:not(.ql-direction-rtl)::before{margin-left:-1.5em;margin-right:.3em;text-align:right}.ql-editor li.ql-direction-rtl::before{margin-left:.3em;margin-right:-1.5em}.ql-editor ol li:not(.ql-direction-rtl),.ql-editor ul li:not(.ql-direction-rtl){padding-left:1.5em}.ql-editor ol li.ql-direction-rtl,.ql-editor ul li.ql-direction-rtl{padding-right:1.5em}.ql-editor ol li{counter-reset:list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;counter-increment:list-0}.ql-editor ol li:before{content:counter(list-0,decimal) '. '}.ql-editor ol li.ql-indent-1{counter-increment:list-1}.ql-editor ol li.ql-indent-1:before{content:counter(list-1,lower-alpha) '. '}.ql-editor ol li.ql-indent-1{counter-reset:list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9}.ql-editor ol li.ql-indent-2{counter-increment:list-2}.ql-editor ol li.ql-indent-2:before{content:counter(list-2,lower-roman) '. '}.ql-editor ol li.ql-indent-2{counter-reset:list-3 list-4 list-5 list-6 list-7 list-8 list-9}.ql-editor ol li.ql-indent-3{counter-increment:list-3}.ql-editor ol li.ql-indent-3:before{content:counter(list-3,decimal) '. '}.ql-editor ol li.ql-indent-3{counter-reset:list-4 list-5 list-6 list-7 list-8 list-9}.ql-editor ol li.ql-indent-4{counter-increment:list-4}.ql-editor ol li.ql-indent-4:before{content:counter(list-4,lower-alpha) '. '}.ql-editor ol li.ql-indent-4{counter-reset:list-5 list-6 list-7 list-8 list-9}.ql-editor ol li.ql-indent-5{counter-increment:list-5}.ql-editor ol li.ql-indent-5:before{content:counter(list-5,lower-roman) '. '}.ql-editor ol li.ql-indent-5{counter-reset:list-6 list-7 list-8 list-9}.ql-editor ol li.ql-indent-6{counter-increment:list-6}.ql-editor ol li.ql-indent-6:before{content:counter(list-6,decimal) '. '}.ql-editor ol li.ql-indent-6{counter-reset:list-7 list-8 list-9}.ql-editor ol li.ql-indent-7{counter-increment:list-7}.ql-editor ol li.ql-indent-7:before{content:counter(list-7,lower-alpha) '. '}.ql-editor ol li.ql-indent-7{counter-reset:list-8 list-9}.ql-editor ol li.ql-indent-8{counter-increment:list-8}.ql-editor ol li.ql-indent-8:before{content:counter(list-8,lower-roman) '. '}.ql-editor ol li.ql-indent-8{counter-reset:list-9}.ql-editor ol li.ql-indent-9{counter-increment:list-9}.ql-editor ol li.ql-indent-9:before{content:counter(list-9,decimal) '. '}.ql-editor .ql-indent-1:not(.ql-direction-rtl){padding-left:3em}.ql-editor li.ql-indent-1:not(.ql-direction-rtl){padding-left:4.5em}.ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right{padding-right:3em}.ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right{padding-right:4.5em}.ql-editor .ql-indent-2:not(.ql-direction-rtl){padding-left:6em}.ql-editor li.ql-indent-2:not(.ql-direction-rtl){padding-left:7.5em}.ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right{padding-right:6em}.ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right{padding-right:7.5em}.ql-editor .ql-indent-3:not(.ql-direction-rtl){padding-left:9em}.ql-editor li.ql-indent-3:not(.ql-direction-rtl){padding-left:10.5em}.ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right{padding-right:9em}.ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right{padding-right:10.5em}.ql-editor .ql-indent-4:not(.ql-direction-rtl){padding-left:12em}.ql-editor li.ql-indent-4:not(.ql-direction-rtl){padding-left:13.5em}.ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right{padding-right:12em}.ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right{padding-right:13.5em}.ql-editor .ql-indent-5:not(.ql-direction-rtl){padding-left:15em}.ql-editor li.ql-indent-5:not(.ql-direction-rtl){padding-left:16.5em}.ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right{padding-right:15em}.ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right{padding-right:16.5em}.ql-editor .ql-indent-6:not(.ql-direction-rtl){padding-left:18em}.ql-editor li.ql-indent-6:not(.ql-direction-rtl){padding-left:19.5em}.ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right{padding-right:18em}.ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right{padding-right:19.5em}.ql-editor .ql-indent-7:not(.ql-direction-rtl){padding-left:21em}.ql-editor li.ql-indent-7:not(.ql-direction-rtl){padding-left:22.5em}.ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right{padding-right:21em}.ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right{padding-right:22.5em}.ql-editor .ql-indent-8:not(.ql-direction-rtl){padding-left:24em}.ql-editor li.ql-indent-8:not(.ql-direction-rtl){padding-left:25.5em}.ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right{padding-right:24em}.ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right{padding-right:25.5em}.ql-editor .ql-indent-9:not(.ql-direction-rtl){padding-left:27em}.ql-editor li.ql-indent-9:not(.ql-direction-rtl){padding-left:28.5em}.ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right{padding-right:27em}.ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right{padding-right:28.5em}.ql-editor .ql-video{display:block;max-width:100%}.ql-editor .ql-video.ql-align-center{margin:0 auto}.ql-editor .ql-video.ql-align-right{margin:0 0 0 auto}.ql-editor .ql-bg-black{background-color:#000}.ql-editor .ql-bg-red{background-color:#e60000}.ql-editor .ql-bg-orange{background-color:#f90}.ql-editor .ql-bg-yellow{background-color:#ff0}.ql-editor .ql-bg-green{background-color:#008a00}.ql-editor .ql-bg-blue{background-color:#06c}.ql-editor .ql-bg-purple{background-color:#93f}.ql-editor .ql-color-white{color:#fff}.ql-editor .ql-color-red{color:#e60000}.ql-editor .ql-color-orange{color:#f90}.ql-editor .ql-color-yellow{color:#ff0}.ql-editor .ql-color-green{color:#008a00}.ql-editor .ql-color-blue{color:#06c}.ql-editor .ql-color-purple{color:#93f}.ql-editor .ql-font-serif{font-family:Georgia,Times New Roman,serif}.ql-editor .ql-font-monospace{font-family:Monaco,Courier New,monospace}.ql-editor .ql-size-small{font-size:.75em}.ql-editor .ql-size-large{font-size:1.5em}.ql-editor .ql-size-huge{font-size:2.5em}.ql-editor .ql-direction-rtl{direction:rtl;text-align:inherit}.ql-editor .ql-align-center{text-align:center}.ql-editor .ql-align-justify{text-align:justify}.ql-editor .ql-align-right{text-align:right}.ql-editor.ql-blank::before{color:rgba(0,0,0,.6);content:attr(data-placeholder);font-style:italic;left:15px;pointer-events:none;position:absolute;right:15px}.ql-snow .ql-toolbar:after,.ql-snow.ql-toolbar:after{clear:both;content:'';display:table}.ql-snow .ql-toolbar button,.ql-snow.ql-toolbar button{background:0 0;border:none;cursor:pointer;display:inline-block;float:left;height:24px;padding:3px 5px;width:28px}.ql-snow .ql-toolbar button svg,.ql-snow.ql-toolbar button svg{float:left;height:100%}.ql-snow .ql-toolbar button:active:hover,.ql-snow.ql-toolbar button:active:hover{outline:0}.ql-snow .ql-toolbar input.ql-image[type=file],.ql-snow.ql-toolbar input.ql-image[type=file]{display:none}.ql-snow .ql-toolbar .ql-picker-item.ql-selected,.ql-snow .ql-toolbar .ql-picker-item:hover,.ql-snow .ql-toolbar .ql-picker-label.ql-active,.ql-snow .ql-toolbar .ql-picker-label:hover,.ql-snow .ql-toolbar button.ql-active,.ql-snow .ql-toolbar button:focus,.ql-snow .ql-toolbar button:hover,.ql-snow.ql-toolbar .ql-picker-item.ql-selected,.ql-snow.ql-toolbar .ql-picker-item:hover,.ql-snow.ql-toolbar .ql-picker-label.ql-active,.ql-snow.ql-toolbar .ql-picker-label:hover,.ql-snow.ql-toolbar button.ql-active,.ql-snow.ql-toolbar button:focus,.ql-snow.ql-toolbar button:hover{color:#06c}.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,.ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,.ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,.ql-snow .ql-toolbar button.ql-active .ql-fill,.ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,.ql-snow .ql-toolbar button:focus .ql-fill,.ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,.ql-snow .ql-toolbar button:hover .ql-fill,.ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,.ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,.ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,.ql-snow.ql-toolbar button.ql-active .ql-fill,.ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,.ql-snow.ql-toolbar button:focus .ql-fill,.ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,.ql-snow.ql-toolbar button:hover .ql-fill,.ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill{fill:#06c}.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,.ql-snow .ql-toolbar button.ql-active .ql-stroke,.ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,.ql-snow .ql-toolbar button:focus .ql-stroke,.ql-snow .ql-toolbar button:focus .ql-stroke-miter,.ql-snow .ql-toolbar button:hover .ql-stroke,.ql-snow .ql-toolbar button:hover .ql-stroke-miter,.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,.ql-snow.ql-toolbar button.ql-active .ql-stroke,.ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,.ql-snow.ql-toolbar button:focus .ql-stroke,.ql-snow.ql-toolbar button:focus .ql-stroke-miter,.ql-snow.ql-toolbar button:hover .ql-stroke,.ql-snow.ql-toolbar button:hover .ql-stroke-miter{stroke:#06c}@media (pointer:coarse){.ql-snow .ql-toolbar button:hover:not(.ql-active),.ql-snow.ql-toolbar button:hover:not(.ql-active){color:#444}.ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,.ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill{fill:#444}.ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,.ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter{stroke:#444}}.ql-snow{box-sizing:border-box}.ql-snow *{box-sizing:border-box}.ql-snow .ql-hidden{display:none}.ql-snow .ql-out-bottom,.ql-snow .ql-out-top{visibility:hidden}.ql-snow .ql-tooltip{position:absolute;transform:translateY(10px)}.ql-snow .ql-tooltip a{cursor:pointer;text-decoration:none}.ql-snow .ql-tooltip.ql-flip{transform:translateY(-10px)}.ql-snow .ql-formats{display:inline-block;vertical-align:middle}.ql-snow .ql-formats:after{clear:both;content:'';display:table}.ql-snow .ql-stroke{fill:none;stroke:#444;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.ql-snow .ql-stroke-miter{fill:none;stroke:#444;stroke-miterlimit:10;stroke-width:2}.ql-snow .ql-fill,.ql-snow .ql-stroke.ql-fill{fill:#444}.ql-snow .ql-empty{fill:none}.ql-snow .ql-even{fill-rule:evenodd}.ql-snow .ql-stroke.ql-thin,.ql-snow .ql-thin{stroke-width:1}.ql-snow .ql-transparent{opacity:.4}.ql-snow .ql-direction svg:last-child{display:none}.ql-snow .ql-direction.ql-active svg:last-child{display:inline}.ql-snow .ql-direction.ql-active svg:first-child{display:none}.ql-snow .ql-editor h1{font-size:2em}.ql-snow .ql-editor h2{font-size:1.5em}.ql-snow .ql-editor h3{font-size:1.17em}.ql-snow .ql-editor h4{font-size:1em}.ql-snow .ql-editor h5{font-size:.83em}.ql-snow .ql-editor h6{font-size:.67em}.ql-snow .ql-editor a{text-decoration:underline}.ql-snow .ql-editor blockquote{border-left:4px solid #ccc;margin-bottom:5px;margin-top:5px;padding-left:16px}.ql-snow .ql-editor code,.ql-snow .ql-editor pre{background-color:#f0f0f0;border-radius:3px}.ql-snow .ql-editor pre{white-space:pre-wrap;margin-bottom:5px;margin-top:5px;padding:5px 10px}.ql-snow .ql-editor code{font-size:85%;padding:2px 4px}.ql-snow .ql-editor pre.ql-syntax{background-color:#23241f;color:#f8f8f2;overflow:visible}.ql-snow .ql-editor img{max-width:100%}.ql-snow .ql-picker{color:#444;display:inline-block;float:left;font-size:14px;font-weight:500;height:24px;position:relative;vertical-align:middle}.ql-snow .ql-picker-label{cursor:pointer;display:inline-block;height:100%;padding-left:8px;padding-right:2px;position:relative;width:100%}.ql-snow .ql-picker-label::before{display:inline-block;line-height:22px}.ql-snow .ql-picker-options{background-color:#fff;display:none;min-width:100%;padding:4px 8px;position:absolute;white-space:nowrap}.ql-snow .ql-picker-options .ql-picker-item{cursor:pointer;display:block;padding-bottom:5px;padding-top:5px}.ql-snow .ql-picker.ql-expanded .ql-picker-label{color:#ccc;z-index:2}.ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill{fill:#ccc}.ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke{stroke:#ccc}.ql-snow .ql-picker.ql-expanded .ql-picker-options{display:block;margin-top:-1px;top:100%;z-index:1}.ql-snow .ql-color-picker,.ql-snow .ql-icon-picker{width:28px}.ql-snow .ql-color-picker .ql-picker-label,.ql-snow .ql-icon-picker .ql-picker-label{padding:2px 4px}.ql-snow .ql-color-picker .ql-picker-label svg,.ql-snow .ql-icon-picker .ql-picker-label svg{right:4px}.ql-snow .ql-icon-picker .ql-picker-options{padding:4px 0}.ql-snow .ql-icon-picker .ql-picker-item{height:24px;width:24px;padding:2px 4px}.ql-snow .ql-color-picker .ql-picker-options{padding:3px 5px;width:152px}.ql-snow .ql-color-picker .ql-picker-item{border:1px solid transparent;float:left;height:16px;margin:2px;padding:0;width:16px}.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg{position:absolute;margin-top:-9px;right:0;top:50%;width:18px}.ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=''])::before,.ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=''])::before,.ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=''])::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=''])::before,.ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=''])::before,.ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=''])::before{content:attr(data-label)}.ql-snow .ql-picker.ql-header{width:98px}.ql-snow .ql-picker.ql-header .ql-picker-item::before,.ql-snow .ql-picker.ql-header .ql-picker-label::before{content:'Normal'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before{content:'Heading 1'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before{content:'Heading 2'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before{content:'Heading 3'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before{content:'Heading 4'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before{content:'Heading 5'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before,.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before{content:'Heading 6'}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before{font-size:2em}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before{font-size:1.5em}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before{font-size:1.17em}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before{font-size:1em}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before{font-size:.83em}.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before{font-size:.67em}.ql-snow .ql-picker.ql-font{width:108px}.ql-snow .ql-picker.ql-font .ql-picker-item::before,.ql-snow .ql-picker.ql-font .ql-picker-label::before{content:'Sans Serif'}.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before,.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before{content:'Serif'}.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before,.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before{content:'Monospace'}.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before{font-family:Georgia,Times New Roman,serif}.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before{font-family:Monaco,Courier New,monospace}.ql-snow .ql-picker.ql-size{width:98px}.ql-snow .ql-picker.ql-size .ql-picker-item::before,.ql-snow .ql-picker.ql-size .ql-picker-label::before{content:'Normal'}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before,.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before{content:'Small'}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before,.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before{content:'Large'}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before,.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before{content:'Huge'}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before{font-size:10px}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before{font-size:18px}.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before{font-size:32px}.ql-snow .ql-color-picker.ql-background .ql-picker-item{background-color:#fff}.ql-snow .ql-color-picker.ql-color .ql-picker-item{background-color:#000}.ql-toolbar.ql-snow{border:1px solid #ccc;box-sizing:border-box;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;padding:8px}.ql-toolbar.ql-snow .ql-formats{margin-right:15px}.ql-toolbar.ql-snow .ql-picker-label{border:1px solid transparent}.ql-toolbar.ql-snow .ql-picker-options{border:1px solid transparent;box-shadow:rgba(0,0,0,.2) 0 2px 8px}.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label{border-color:#ccc}.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options{border-color:#ccc}.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover{border-color:#000}.ql-toolbar.ql-snow+.ql-container.ql-snow{border-top:0}.ql-snow .ql-tooltip{background-color:#fff;border:1px solid #ccc;box-shadow:0 0 5px #ddd;color:#444;padding:5px 12px;white-space:nowrap}.ql-snow .ql-tooltip::before{content:"Visit URL:";line-height:26px;margin-right:8px}.ql-snow .ql-tooltip input[type=text]{display:none;border:1px solid #ccc;font-size:13px;height:26px;margin:0;padding:3px 5px;width:170px}.ql-snow .ql-tooltip a.ql-preview{display:inline-block;max-width:200px;overflow-x:hidden;text-overflow:ellipsis;vertical-align:top}.ql-snow .ql-tooltip a.ql-action::after{border-right:1px solid #ccc;content:'Edit';margin-left:16px;padding-right:8px}.ql-snow .ql-tooltip a.ql-remove::before{content:'Remove';margin-left:8px}.ql-snow .ql-tooltip a{line-height:26px}.ql-snow .ql-tooltip.ql-editing a.ql-preview,.ql-snow .ql-tooltip.ql-editing a.ql-remove{display:none}.ql-snow .ql-tooltip.ql-editing input[type=text]{display:inline-block}.ql-snow .ql-tooltip.ql-editing a.ql-action::after{border-right:0;content:'Save';padding-right:0}.ql-snow .ql-tooltip[data-mode=link]::before{content:"Enter link:"}.ql-snow .ql-tooltip[data-mode=formula]::before{content:"Enter formula:"}.ql-snow .ql-tooltip[data-mode=video]::before{content:"Enter video:"}.ql-snow a{color:#06c}.ql-container.ql-snow{border:1px solid #ccc}</style><style type="text/css">.ql-editor{min-height:200px;font-size:16px}.ql-snow .ql-stroke.ql-thin,.ql-snow .ql-thin{stroke-width:1px!important}.quillWrapper .ql-snow.ql-toolbar{padding-top:8px;padding-bottom:4px}.quillWrapper .ql-snow.ql-toolbar .ql-formats{margin-bottom:10px}.ql-snow .ql-toolbar button svg,.quillWrapper .ql-snow.ql-toolbar button svg{width:22px;height:22px}.quillWrapper .ql-editor ul[data-checked=false]>li::before,.quillWrapper .ql-editor ul[data-checked=true]>li::before{font-size:1.35em;vertical-align:baseline;bottom:-.065em;font-weight:900;color:#222}.quillWrapper .ql-snow .ql-stroke{stroke:rgba(63,63,63,.95);stroke-linecap:square;stroke-linejoin:initial;stroke-width:1.7px}.quillWrapper .ql-picker-label{font-size:15px}.quillWrapper .ql-snow .ql-active .ql-stroke{stroke-width:2.25px}.quillWrapper .ql-toolbar.ql-snow .ql-formats{vertical-align:top}.ql-picker:not(.ql-background){position:relative;top:2px}.ql-picker.ql-color-picker svg{width:22px!important;height:22px!important}.quillWrapper .imageResizeActive img{display:block;cursor:pointer}.quillWrapper .imageResizeActive~div svg{cursor:pointer}</style></head><body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1055.0"><noscript><strong>We're sorry but vue-cli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class="root sidebarClose sing-dashboard"><div data-v-5c66a619="" class="sidebar-wrapper"><nav data-v-5c66a619="" class="sidebar"><header data-v-5c66a619="" class="logo"><div data-v-5c66a619=""><a data-v-5c66a619="" href="https://is2host.com/albadr-tasks/#/app/dashboard" class="text-center"><img data-v-5c66a619="" src="./Al-Badr Managment Dashboard_files/logo1.e3fdd6e3.png" alt="..."><p data-v-5c66a619=""><span data-v-5c66a619="" class="primary-word">AL-badr</span> Managment
+              </p></a></div></header><ul data-v-5c66a619="" class="nav"><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/dashboard" class="sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-home"></i></span>
+    HomePage <!----><!----></a></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/projects" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-database"></i></span>
+      Projects <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapseprojects" class="collapse" style="display: none;"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/projects/add" class="">
+    Add <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/projects/display" class="">
+    Display <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/projects/ProjectsReport" class="">
+    Projects Report <!----></a></li></ul></div></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/tasks" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-network"></i></span>
+      Tasks <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapsetasks" style="display: none;" class="collapse"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/tasks/add" class="">
+    Add <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/tasks/Mytasks" class="">
+    MyTasks <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/tasks/MyFollowedTask" class="">
+    My Followed Task <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/tasks/AllTasks" class="">
+    All Tasks <!----></a></li></ul></div></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/Notifications" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-notification"></i></span>
+      Notifications <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapseNotifications" class="collapse" style="display: none;"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Notifications/NotificationsList" class="">
+    Notifications <!----></a></li></ul></div></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/employee-setting" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-settings-1"></i></span>
+      Employees <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapseemployee-setting" class="collapse" style="display: none;"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/employee-setting/EmployeeReport" class="">
+    Employees Report <!----></a></li></ul></div></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/Wiki" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-settings-4"></i></span>
+      Wiki <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapseWiki" class="collapse" style="display: none;"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Wiki/Add-wiki" class="">
+    Add Wiki <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Wiki/DisplayWiki" class="">
+    Organization  Wikies <!----></a></li></ul></div></li><li data-v-1ccfb1c1="" data-v-5c66a619="" class="headerLink"><div data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/pages/Setting" class="d-flex sidebar-link"><span data-v-1ccfb1c1="" class="icon"><i data-v-1ccfb1c1="" class="fi flaticon-settings-4"></i></span>
+      Setting <!----><div data-v-1ccfb1c1="" class="caretWrapper"><i data-v-1ccfb1c1="" class="fa fa-angle-left"></i></div></a></div><div data-v-1ccfb1c1="" id="collapseSetting" class="collapse" style="display: none;"><ul data-v-1ccfb1c1="" class="sub-menu"><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Setting/Display" class="">
+    Tasks Status <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Setting/Display-BackLog-Status" class="">
+    BackLogs Status <!----></a></li><li data-v-1ccfb1c1=""><a data-v-1ccfb1c1="" href="https://is2host.com/albadr-tasks/#/app/Setting/Display-Cateogries" class="">
+    Wiki Cateogries <!----></a></li></ul></div></li></ul></nav></div><div class="theme-helper"></div><div class="wrap"><nav class="navbar header d-print-none app-header navbar-light navbar-expand"><ul class="nav"><li class="nav-item"><a href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link"><a href="https://is2host.com/albadr-tasks/#" id="barsTooltip" class="d-md-down-none px-2"><i class="la la-bars la-lg"></i></a><a href="https://is2host.com/albadr-tasks/#" class="fs-lg d-lg-none"><i class="la la-bars la-lg"></i></a></a></li></ul><ul class="nav"><li class="nav-item d-md-down-none"><a href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link"><input type="number" placeholder="Enter Task ID" min="1" class="mr-sm-2 form-control form-control-sm" id="__BVID__70"><button type="submit" class="btn btn search-btn btn-primary btn-secondary btn-sm"><span class="fa fa-search"></span></button><!----></a></li></ul><ul class="nav ml-auto"><li class="nav-item b-nav-dropdown dropdown notificationsMenu d-md-down-none mr-2" id="__BVID__72"><a role="button" aria-haspopup="true" aria-expanded="false" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link dropdown-toggle" id="__BVID__72__BV_toggle_"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="small">عدل عزت</span><span><a href="https://is2host.com/albadr-tasks/#/app/Notifications/NotificationsList" class="ml-2 mr-3 circle bg-primary text-white fw-bold" target="_self">
+                   
+
+      </a></span></a><ul tabindex="-1" class="dropdown-menu notificationsWrapper py-0 animate__animated animate__animated-fast animate__fadeIn dropdown-menu-right" aria-labelledby="__BVID__72__BV_toggle_"><section class="notifications navbar-notifications"></section></ul></li><li id="v-step-2" class="nav-item b-nav-dropdown dropdown settingsDropdown d-sm-down-none"><a id="v-step-2__BV_toggle_" role="button" aria-haspopup="true" aria-expanded="false" href="https://is2host.com/albadr-tasks/#v-step-2" target="_self" class="nav-link dropdown-toggle dropdown-toggle-no-caret"><i class="la la-cog px-2"></i></a><ul tabindex="-1" aria-labelledby="v-step-2__BV_toggle_" class="dropdown-menu dropdown-menu-right"><li role="presentation"><button role="menuitem" type="button" class="dropdown-item"><i class="la la-sign-out"></i> Log Out
+      </button></li></ul></li></ul></nav><div class="content" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div></div><div><ol class="breadcrumb step_title"><li class="breadcrumb-item"><a href="https://is2host.com/albadr-tasks/#/app/dashboard" class="" target="_self"><span class="glyphicon glyphicon-home"></span>
+        Home
+      </a></li><li class="breadcrumb-item"><a href="https://is2host.com/albadr-tasks/#/app/tasks/display/2" class="" target="_self">
+        Tasks</a></li><li class="breadcrumb-item active"><span aria-current="location"> طلب عميل محل احزيه اسكندريه  27692 </span></li></ol><div class="text-center"><!----></div><div class="d-flex justify-content-center mb-3"><span larg="" role="status" class="spinner-border text-primary" style="display: none;"><span class="sr-only">Small Spinner</span></span></div><section class="widget" style=""><!----><!----><!----><!----><div class="widgetBody widget-body "><button type="button" class="btn btn btn-success btn-xs float-right btn-success"><i class="fa fa-edit"></i></button><div class="container"><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Project Admin:</strong></div><div class="col-md-3">محمود عرفات</div><div class="col-md-3"><strong>Project Name:</strong></div><div class="col-md-3"><a href="https://is2host.com/albadr-tasks/#/app/projects/show/1" class="" target="_self">
+                البدر للمبيعات
+              </a></div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Start Date:</strong></div><div class="col-md-3">2022-02-06</div><div class="col-md-3"><strong>End Date:</strong></div><div class="col-md-3">2022-11-15</div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Start Time:</strong></div><div class="col-md-3">15:07</div><div class="col-md-3"><strong>End Time:</strong></div><div class="col-md-3">15:07</div></div></div><div class="padding-10"><div class="row align-items-center"><div class="col-md-3"><strong>Priority:</strong></div><div class="col-md-3">high</div><div class="col-md-3"><strong>Status:</strong></div><div class="col-md-3"><div tabindex="-1" class="multiselect"><div class="multiselect__select"></div>  <div class="multiselect__tags"><div class="multiselect__tags-wrap" style="display: none;"></div> <!----> <div class="multiselect__spinner" style="display: none;"></div> <input name="" type="text" autocomplete="nope" placeholder="select" tabindex="0" class="multiselect__input" style="width: 0px; position: absolute; padding: 0px;"> <span class="multiselect__single">open</span> <!----></div> <div tabindex="-1" class="multiselect__content-wrapper" style="max-height: 300px; display: none;"><ul class="multiselect__content" style="display: inline-block;"> <!----> <li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option multiselect__option--highlight"><span>in_progress</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option multiselect__option--selected"><span>open</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>QRCODE UPDATE</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>to_be_tested</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>to_contact_client</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>waiting_client_reply</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>cancelled</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>closed</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>delayed</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>on_hold</span></span> <!----></li><li class="multiselect__element"><span data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove" class="multiselect__option"><span>اقترحات تطوير</span></span> <!----></li> <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li> <li style="display: none;"><span class="multiselect__option">List is empty.</span></li> </ul></div></div></div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Created at:</strong></div><div class="col-md-3">2021-11-15 15:07:51</div><div class="col-md-3"><strong>Task Duration:</strong></div><div class="col-md-3"><span>No Duration</span></div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Task Type:</strong></div><div class="col-md-3"><span class="badge badge-info">
+                Task
+              </span></div></div></div><!----><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Task Details:</strong></div><div class="col-md-9"><div class="taskdetails"><p>مططلوب ف اضافه عميل خانه  يكتب فيها المقاس ...زي ملاحظه كده </p><p>كوبونات الخصم تكون شغاله ف النسخه الاوفلاين بيعمل كوبون وله وقت معين </p><p>....................................</p><h3><br></h3><h3><strong>اخرحاجه توصلنا لها</strong></h3><p><br></p><p>اولا موضوع الكوبونات هيتعمل من طرف البشمهندس محمود الزياد</p><p>اكود الخصم ... الكود بيشتغل اكتر من مره في مده من والي</p><p>وكنا ورينا للعميل كوبونات الخصم الموجوده والحاله انها مفعله او غير مفعله</p><p>وتم الاتفاق مع العميل ان بدايه تشغيل الكوبون هو وقت انشاء كوبون الخصم والعميل هيحدد فقط تاريخ انتهاء الخصم</p><p>خصم الكوبون نسبه</p><p><br></p><p><br></p><p>موضوع المقسا الخاص بالعميل هيتم عمل نشاط جديد باسم احذيه ولابس وفيها لما نختاره يكون ف بيانات العميل خانه للمقاس..والخانه دي تكون موجوده في حاله اضافه عميل وقت عمليه البيع من نقطه البيع</p><p>كمان المقاس بتاع العميل هيظهر معايا ف نقطه البيع وانا بعمل الفاتوره للعميل</p><p><br></p><p>لما تدخل ع العملا ... (المطلوب اسم العميل-رقم التيلفون-العنوان-المقاس-ملاحظات)</p><p><br></p></div></div></div></div><div class="padding-10"><div class="row"><div class="col-md-12"><hr></div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Task Employee:</strong></div><div class="col-md-3">محمد متولى</div><div class="col-md-3" style="display: none;"><strong>Technical Support Code:</strong></div><div class="col-md-3" style="display: none;"></div></div></div><div class="padding-10"><div class="row align-items-center"><div class="col-md-3"><strong>Task Followers:</strong></div><div class="col-md-9"><span class="teamname">
+                محمود عرفات
+              </span><span class="teamname">
+                محمد متولى
+              </span><span class="teamname">
+                احمد عباس
+              </span><span class="teamname">
+                ايهاب احمد
+              </span><span class="teamname">
+                محمود الزيادي
+              </span><div style="display: none;">
+                
+              </div></div></div></div><div class="padding-10"><div class="row"><div class="col-md-3"><strong>Task Reviewer:</strong></div><div class="col-md-3">محمود عرفات</div><div class="col-md-3"><strong>Reviewer Status:</strong></div><div class="col-md-2"><select class="custom-select" id="__BVID__334"><option value="">Please select status</option><option value="initial">Initial</option><option value="done">done</option><option value="rejected">rejected</option></select></div></div></div><div class="padding-10"><div class="row"><div class="col-12"><hr></div></div></div><div class="padding-10"><div class="row"><div class="col-md-12"><strong> Milestone:</strong></div><div class="col-md-12"><div class="row"><div class="col-md-4"><span class="text">Name:</span><a href="https://is2host.com/albadr-tasks/#/app/tasks/display/2" class="" target="_self">طلبات العملاء
+                  </a></div><div class="col-md-3"><span class="text"> Start Date: </span>
+                  2021-02-01
+                </div><div class="col-md-3"><span class="text">End Date: </span>
+                  2021-02-07</div><div class="col-md-2"><span class="pro-status">41.86%</span></div></div><div style="display: none;">
+                
+              </div></div></div></div><div class="padding-10"><div class="row"><div class="col-12"><hr></div></div></div><div class="tabs" id="__BVID__337"><!----><div class=""><ul role="tablist" class="nav nav-tabs" id="__BVID__337__BV_tab_controls_"><!----><li role="presentation" class="nav-item"><a role="tab" aria-selected="true" aria-setsize="5" aria-posinset="1" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link active" id="__BVID__338___BV_tab_button__" aria-controls="__BVID__338">Comments</a></li><li role="presentation" class="nav-item"><a role="tab" tabindex="-1" aria-selected="false" aria-setsize="5" aria-posinset="2" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link" id="__BVID__341___BV_tab_button__" aria-controls="__BVID__341">Attachment</a></li><li role="presentation" class="nav-item"><a role="tab" tabindex="-1" aria-selected="false" aria-setsize="5" aria-posinset="3" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link" id="__BVID__343___BV_tab_button__" aria-controls="__BVID__343">Subtasks</a></li><li role="presentation" class="nav-item"><a role="tab" tabindex="-1" aria-selected="false" aria-setsize="5" aria-posinset="4" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link" id="__BVID__351___BV_tab_button__" aria-controls="__BVID__351">Task Test Cases</a></li><li role="presentation" class="nav-item"><a role="tab" tabindex="-1" aria-selected="false" aria-setsize="5" aria-posinset="5" href="https://is2host.com/albadr-tasks/#" target="_self" class="nav-link" id="__BVID__357___BV_tab_button__" aria-controls="__BVID__357">Runs</a></li><!----></ul></div><div class="tab-content mt-3" id="__BVID__337__BV_tab_container_"><div role="tabpanel" aria-hidden="false" class="tab-pane active" id="__BVID__338" aria-labelledby="__BVID__338___BV_tab_button__"><div class="row"><div class="col-md-11"><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2021-11-15 15:07:51</span>
+                  /
+                  <span>Task assigned to: محمود عرفات</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود عرفات :  
+                  </span><span>2021-11-22 11:08:11</span>
+                  /
+                  <span><p><br></p><p><br></p><p>هيتم التنسيق بعد معرفة التكلفة الاضافية </p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمد متولى :  
+                  </span><span>2021-11-29 10:24:16</span>
+                  /
+                  <span><p><br></p><p>التكلفة الاضافية </p><p>500</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمد متولى :  
+                  </span><span>2021-11-29 10:24:27</span>
+                  /
+                  <span>Task re-assigned to: احمد عباس</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2021-11-29 15:43:05</span>
+                  /
+                  <span><p>تمام في انتظار العميل </p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-01-09 15:07:57</span>
+                  /
+                  <span><p>العميل وافق ع التكلفه</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود عرفات :  
+                  </span><span>2022-01-26 15:11:55</span>
+                  /
+                  <span>Task status was changed from open to closed</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-06 16:12:10</span>
+                  /
+                  <span>Task status was changed from closed to open</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-06 16:12:31</span>
+                  /
+                  <span><p>تم الاتفاق مع العميل علي التكلفه ومطلوب عملها </p><p>وتبليغي احمد عباس بعد الانتهاء</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-06 16:12:48</span>
+                  /
+                  <span>Task was Edited</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-06 16:14:06</span>
+                  /
+                  <span>Task was Edited</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-13 13:04:57</span>
+                  /
+                  <span><p>مشاكل احري عند العميل برجاء حلها علشان نسلم كله مره واحده </p><p>الرقم  قومي للضامن حذف لان مع  تعديل اي بيانات للعميل بيطلب الرقم القومي </p><p>خانه ملاحظات تظهر مع العميل .. دي الخانه الموجوده عند اضافه بيانات العميل عاوزينها تظهر لما تخوش ع صفحة العملا جمب اسم العميل</p><p>لما تدخل ع العملا ... (المطلوب اسم العميل-رقم التيلفون-العنوان-المقاس-ملاحظات) </p><p>تقرير مبيعات بيظهر بدون مبلغ الخصم (التقارير تحتوي علي المبلغ بعد الخصم)</p><p>كود للخصم (اكواد مختلفه بنسب مختلفه)</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-22 14:59:24</span>
+                  /
+                  <span>Task re-assigned to: محمود عرفات</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود عرفات :  
+                  </span><span>2022-02-23 09:36:30</span>
+                  /
+                  <span><p>الرقم قومي للضامن حذف لان مع تعديل اي بيانات للعميل بيطلب الرقم القومي</p><h2>وقف الاقساط لو هو مش محتاجها </h2><p>-------------</p><p>تقرير مبيعات بيظهر بدون مبلغ الخصم (التقارير تحتوي علي المبلغ بعد الخصم)</p><h2>مش فاهم عاوز ايه ؟ </h2><h2>ما هي بتكون كده </h2><h2>اجمالي البيع كام وخلصنا </h2><h2>مش هتتعدل دي </h2><h2>عشان هتعملي لخبطة جامدة</h2><p>-------------</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-23 12:09:47</span>
+                  /
+                  <span><p>تقرير مبيعات بيظهر بدون مبلغ الخصم (التقارير تحتوي علي المبلغ بعد الخصم)</p><h2><strong>دي لقيت لها حل ف تقرير .. ف تقريرين شبه بعض وواحد فيهم في التقرير ده مش محتاجينها خلاص </strong></h2></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-02-23 12:15:28</span>
+                  /
+                  <span><h2>وقف الاقساط لو هو مش محتاجها</h2><p>عنده الاقساط واقفه وبرضه بتيجي هنجرب اني ديسك لما نفتح معاه ولو ف حاجه نعملهاله </p><p><br></p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-03-21 09:06:23</span>
+                  /
+                  <span><p>التاسك ده مش هنخلص منه ؟</p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-03-21 09:07:00</span>
+                  /
+                  <span>Task was Edited</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-03-27 13:06:36</span>
+                  /
+                  <span>Task was Edited</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    احمد عباس :  
+                  </span><span>2022-03-29 15:42:00</span>
+                  /
+                  <span>Task was Edited</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-02 11:00:56</span>
+                  /
+                  <span>Task re-assigned to: محمود الزيادي</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-03 16:43:55</span>
+                  /
+                  <span><p>تم عمل ملفين </p><p>الاول لاظهار خانه خاصه بكود خصم داخل صفحه المبيعات </p><p>الثانيه ملف الاستعلام عن الكود </p><p>---------</p><p>مطلوب عمل اعدادات خاصه بتفعيل كوبون الخصم فى صفحه المبيعات </p><p>واستدعاء ملف ظهور الصنف فى صفحه المبيعات </p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-03 16:44:17</span>
+                  /
+                  <span>A new file was added to task attachments</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-03 16:44:21</span>
+                  /
+                  <span>A new file was added to task attachments</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-03 16:44:46</span>
+                  /
+                  <span><p>تم ارفاق الملفات بالتاسك لاستكمال التاسك من قبل فريق البدر للمبيعات </p></span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمود الزيادي :  
+                  </span><span>2022-04-03 16:44:58</span>
+                  /
+                  <span>Task re-assigned to: محمد متولى</span></p><p class="commentname"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span><span class="float-left font-weight-bold">
+                    محمد متولى :  
+                  </span><span>2022-04-06 09:27:15</span>
+                  /
+                  <span><p><strong>انا ضفت التعديلات اللى البشمهندس بعتهالى وعملت اعدادات لكوبون الخصم</strong></p><p><strong>------------------------------------------------------------------------------</strong></p><p><strong>حسين معاه تعديلات العملاء</strong></p></span></p><div style="display: none;">
+                  
+                </div></div></div><form class="mt"><div class="row"><div class="col-md-1"><span class="avatar rounded-circle thumb-sm float-left mr-2"><img src="./Al-Badr Managment Dashboard_files/a5.84f014f0.jpg" alt="..." class="rounded-circle"></span></div><div class="col-sm-11"><div class="quillWrapper"> <div class="ql-toolbar ql-snow"><span class="ql-formats"><span class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-0"><svg viewBox="0 0 18 18"> <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon> <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon> </svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-0"><span tabindex="0" role="button" class="ql-picker-item ql-selected"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="1"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="2"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="3"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="4"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="5"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="6"></span></span></span><select class="ql-header" style="display: none;"><option selected="selected"></option><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option><option value="6"></option></select></span><span class="ql-formats"><button type="button" class="ql-bold ql-active"><svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path> </svg></button><button type="button" class="ql-italic"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line> <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line> <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line> </svg></button><button type="button" class="ql-underline ql-active"><svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path> <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect> </svg></button><button type="button" class="ql-strike"><svg viewBox="0 0 18 18"> <line class="ql-stroke ql-thin" x1="15.5" x2="2.5" y1="8.5" y2="9.5"></line> <path class="ql-fill" d="M9.007,8C6.542,7.791,6,7.519,6,6.5,6,5.792,7.283,5,9,5c1.571,0,2.765.679,2.969,1.309a1,1,0,0,0,1.9-.617C13.356,4.106,11.354,3,9,3,6.2,3,4,4.538,4,6.5a3.2,3.2,0,0,0,.5,1.843Z"></path> <path class="ql-fill" d="M8.984,10C11.457,10.208,12,10.479,12,11.5c0,0.708-1.283,1.5-3,1.5-1.571,0-2.765-.679-2.969-1.309a1,1,0,1,0-1.9.617C4.644,13.894,6.646,15,9,15c2.8,0,5-1.538,5-3.5a3.2,3.2,0,0,0-.5-1.843Z"></path> </svg></button></span><span class="ql-formats"><button type="button" class="ql-align ql-active" value=""><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="3" x2="15" y1="9" y2="9"></line> <line class="ql-stroke" x1="3" x2="13" y1="14" y2="14"></line> <line class="ql-stroke" x1="3" x2="9" y1="4" y2="4"></line> </svg></button><button type="button" class="ql-align" value="center"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="14" x2="4" y1="14" y2="14"></line> <line class="ql-stroke" x1="12" x2="6" y1="4" y2="4"></line> </svg></button><button type="button" class="ql-align" value="right"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="15" x2="5" y1="14" y2="14"></line> <line class="ql-stroke" x1="15" x2="9" y1="4" y2="4"></line> </svg></button><button type="button" class="ql-align" value="justify"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="15" x2="3" y1="14" y2="14"></line> <line class="ql-stroke" x1="15" x2="3" y1="4" y2="4"></line> </svg></button></span><span class="ql-formats"><button type="button" class="ql-blockquote"><svg viewBox="0 0 18 18"> <rect class="ql-fill ql-stroke" height="3" width="3" x="4" y="5"></rect> <rect class="ql-fill ql-stroke" height="3" width="3" x="11" y="5"></rect> <path class="ql-even ql-fill ql-stroke" d="M7,8c0,4.031-3,5-3,5"></path> <path class="ql-even ql-fill ql-stroke" d="M14,8c0,4.031-3,5-3,5"></path> </svg></button><button type="button" class="ql-code-block"><svg viewBox="0 0 18 18"> <polyline class="ql-even ql-stroke" points="5 7 3 9 5 11"></polyline> <polyline class="ql-even ql-stroke" points="13 7 15 9 13 11"></polyline> <line class="ql-stroke" x1="10" x2="8" y1="5" y2="13"></line> </svg></button></span><span class="ql-formats"><button type="button" class="ql-list" value="ordered"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line> <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line> <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line> <path class="ql-fill" d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z"></path> <path class="ql-stroke ql-thin" d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path> <path class="ql-stroke ql-thin" d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109"></path> </svg></button><button type="button" class="ql-list" value="bullet"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line> <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line> <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line> <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line> </svg></button><button type="button" class="ql-list" value="check"><svg class="" viewBox="0 0 18 18"> <line class="ql-stroke" x1="9" x2="15" y1="4" y2="4"></line> <polyline class="ql-stroke" points="3 4 4 5 6 3"></polyline> <line class="ql-stroke" x1="9" x2="15" y1="14" y2="14"></line> <polyline class="ql-stroke" points="3 14 4 15 6 13"></polyline> <line class="ql-stroke" x1="9" x2="15" y1="9" y2="9"></line> <polyline class="ql-stroke" points="3 9 4 10 6 8"></polyline> </svg></button></span><span class="ql-formats"><button type="button" class="ql-indent" value="-1"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="3" x2="15" y1="14" y2="14"></line> <line class="ql-stroke" x1="3" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="9" x2="15" y1="9" y2="9"></line> <polyline class="ql-stroke" points="5 7 5 11 3 9 5 7"></polyline> </svg></button><button type="button" class="ql-indent" value="+1"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="3" x2="15" y1="14" y2="14"></line> <line class="ql-stroke" x1="3" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="9" x2="15" y1="9" y2="9"></line> <polyline class="ql-fill ql-stroke" points="3 7 3 11 5 9 3 7"></polyline> </svg></button></span><span class="ql-formats"><span class="ql-color ql-picker ql-color-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-1"><svg viewBox="0 0 18 18"> <line class="ql-color-label ql-stroke ql-transparent" x1="3" x2="15" y1="15" y2="15"></line> <polyline class="ql-stroke" points="5.5 11 9 3 12.5 11"></polyline> <line class="ql-stroke" x1="11.63" x2="6.38" y1="9" y2="9"></line> </svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-1"><span tabindex="0" role="button" class="ql-picker-item ql-selected ql-primary"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#e60000" style="background-color: rgb(230, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ff9900" style="background-color: rgb(255, 153, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ffff00" style="background-color: rgb(255, 255, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#008a00" style="background-color: rgb(0, 138, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#0066cc" style="background-color: rgb(0, 102, 204);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#9933ff" style="background-color: rgb(153, 51, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffff" style="background-color: rgb(255, 255, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#facccc" style="background-color: rgb(250, 204, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffebcc" style="background-color: rgb(255, 235, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffcc" style="background-color: rgb(255, 255, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce8cc" style="background-color: rgb(204, 232, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce0f5" style="background-color: rgb(204, 224, 245);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ebd6ff" style="background-color: rgb(235, 214, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#bbbbbb" style="background-color: rgb(187, 187, 187);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#f06666" style="background-color: rgb(240, 102, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffc266" style="background-color: rgb(255, 194, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffff66" style="background-color: rgb(255, 255, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66b966" style="background-color: rgb(102, 185, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66a3e0" style="background-color: rgb(102, 163, 224);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#c285ff" style="background-color: rgb(194, 133, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#888888" style="background-color: rgb(136, 136, 136);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#a10000" style="background-color: rgb(161, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b26b00" style="background-color: rgb(178, 107, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b2b200" style="background-color: rgb(178, 178, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#006100" style="background-color: rgb(0, 97, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#0047b2" style="background-color: rgb(0, 71, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#6b24b2" style="background-color: rgb(107, 36, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#444444" style="background-color: rgb(68, 68, 68);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#5c0000" style="background-color: rgb(92, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#663d00" style="background-color: rgb(102, 61, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#666600" style="background-color: rgb(102, 102, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#003700" style="background-color: rgb(0, 55, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#002966" style="background-color: rgb(0, 41, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#3d1466" style="background-color: rgb(61, 20, 102);"></span></span></span><select class="ql-color" style="display: none;"><option selected="selected"></option><option value="#e60000"></option><option value="#ff9900"></option><option value="#ffff00"></option><option value="#008a00"></option><option value="#0066cc"></option><option value="#9933ff"></option><option value="#ffffff"></option><option value="#facccc"></option><option value="#ffebcc"></option><option value="#ffffcc"></option><option value="#cce8cc"></option><option value="#cce0f5"></option><option value="#ebd6ff"></option><option value="#bbbbbb"></option><option value="#f06666"></option><option value="#ffc266"></option><option value="#ffff66"></option><option value="#66b966"></option><option value="#66a3e0"></option><option value="#c285ff"></option><option value="#888888"></option><option value="#a10000"></option><option value="#b26b00"></option><option value="#b2b200"></option><option value="#006100"></option><option value="#0047b2"></option><option value="#6b24b2"></option><option value="#444444"></option><option value="#5c0000"></option><option value="#663d00"></option><option value="#666600"></option><option value="#003700"></option><option value="#002966"></option><option value="#3d1466"></option></select><span class="ql-background ql-picker ql-color-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-2"><svg viewBox="0 0 18 18"> <g class="ql-fill ql-color-label"> <polygon points="6 6.868 6 6 5 6 5 7 5.942 7 6 6.868"></polygon> <rect height="1" width="1" x="4" y="4"></rect> <polygon points="6.817 5 6 5 6 6 6.38 6 6.817 5"></polygon> <rect height="1" width="1" x="2" y="6"></rect> <rect height="1" width="1" x="3" y="5"></rect> <rect height="1" width="1" x="4" y="7"></rect> <polygon points="4 11.439 4 11 3 11 3 12 3.755 12 4 11.439"></polygon> <rect height="1" width="1" x="2" y="12"></rect> <rect height="1" width="1" x="2" y="9"></rect> <rect height="1" width="1" x="2" y="15"></rect> <polygon points="4.63 10 4 10 4 11 4.192 11 4.63 10"></polygon> <rect height="1" width="1" x="3" y="8"></rect> <path d="M10.832,4.2L11,4.582V4H10.708A1.948,1.948,0,0,1,10.832,4.2Z"></path> <path d="M7,4.582L7.168,4.2A1.929,1.929,0,0,1,7.292,4H7V4.582Z"></path> <path d="M8,13H7.683l-0.351.8a1.933,1.933,0,0,1-.124.2H8V13Z"></path> <rect height="1" width="1" x="12" y="2"></rect> <rect height="1" width="1" x="11" y="3"></rect> <path d="M9,3H8V3.282A1.985,1.985,0,0,1,9,3Z"></path> <rect height="1" width="1" x="2" y="3"></rect> <rect height="1" width="1" x="6" y="2"></rect> <rect height="1" width="1" x="3" y="2"></rect> <rect height="1" width="1" x="5" y="3"></rect> <rect height="1" width="1" x="9" y="2"></rect> <rect height="1" width="1" x="15" y="14"></rect> <polygon points="13.447 10.174 13.469 10.225 13.472 10.232 13.808 11 14 11 14 10 13.37 10 13.447 10.174"></polygon> <rect height="1" width="1" x="13" y="7"></rect> <rect height="1" width="1" x="15" y="5"></rect> <rect height="1" width="1" x="14" y="6"></rect> <rect height="1" width="1" x="15" y="8"></rect> <rect height="1" width="1" x="14" y="9"></rect> <path d="M3.775,14H3v1H4V14.314A1.97,1.97,0,0,1,3.775,14Z"></path> <rect height="1" width="1" x="14" y="3"></rect> <polygon points="12 6.868 12 6 11.62 6 12 6.868"></polygon> <rect height="1" width="1" x="15" y="2"></rect> <rect height="1" width="1" x="12" y="5"></rect> <rect height="1" width="1" x="13" y="4"></rect> <polygon points="12.933 9 13 9 13 8 12.495 8 12.933 9"></polygon> <rect height="1" width="1" x="9" y="14"></rect> <rect height="1" width="1" x="8" y="15"></rect> <path d="M6,14.926V15H7V14.316A1.993,1.993,0,0,1,6,14.926Z"></path> <rect height="1" width="1" x="5" y="15"></rect> <path d="M10.668,13.8L10.317,13H10v1h0.792A1.947,1.947,0,0,1,10.668,13.8Z"></path> <rect height="1" width="1" x="11" y="15"></rect> <path d="M14.332,12.2a1.99,1.99,0,0,1,.166.8H15V12H14.245Z"></path> <rect height="1" width="1" x="14" y="15"></rect> <rect height="1" width="1" x="15" y="11"></rect> </g> <polyline class="ql-stroke" points="5.5 13 9 5 12.5 13"></polyline> <line class="ql-stroke" x1="11.63" x2="6.38" y1="11" y2="11"></line> </svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-2"><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#000000" style="background-color: rgb(0, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#e60000" style="background-color: rgb(230, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ff9900" style="background-color: rgb(255, 153, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ffff00" style="background-color: rgb(255, 255, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#008a00" style="background-color: rgb(0, 138, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#0066cc" style="background-color: rgb(0, 102, 204);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#9933ff" style="background-color: rgb(153, 51, 255);"></span><span tabindex="0" role="button" class="ql-picker-item ql-selected"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#facccc" style="background-color: rgb(250, 204, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffebcc" style="background-color: rgb(255, 235, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffcc" style="background-color: rgb(255, 255, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce8cc" style="background-color: rgb(204, 232, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce0f5" style="background-color: rgb(204, 224, 245);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ebd6ff" style="background-color: rgb(235, 214, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#bbbbbb" style="background-color: rgb(187, 187, 187);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#f06666" style="background-color: rgb(240, 102, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffc266" style="background-color: rgb(255, 194, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffff66" style="background-color: rgb(255, 255, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66b966" style="background-color: rgb(102, 185, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66a3e0" style="background-color: rgb(102, 163, 224);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#c285ff" style="background-color: rgb(194, 133, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#888888" style="background-color: rgb(136, 136, 136);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#a10000" style="background-color: rgb(161, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b26b00" style="background-color: rgb(178, 107, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b2b200" style="background-color: rgb(178, 178, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#006100" style="background-color: rgb(0, 97, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#0047b2" style="background-color: rgb(0, 71, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#6b24b2" style="background-color: rgb(107, 36, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#444444" style="background-color: rgb(68, 68, 68);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#5c0000" style="background-color: rgb(92, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#663d00" style="background-color: rgb(102, 61, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#666600" style="background-color: rgb(102, 102, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#003700" style="background-color: rgb(0, 55, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#002966" style="background-color: rgb(0, 41, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#3d1466" style="background-color: rgb(61, 20, 102);"></span></span></span><select class="ql-background" style="display: none;"><option value="#000000"></option><option value="#e60000"></option><option value="#ff9900"></option><option value="#ffff00"></option><option value="#008a00"></option><option value="#0066cc"></option><option value="#9933ff"></option><option selected="selected"></option><option value="#facccc"></option><option value="#ffebcc"></option><option value="#ffffcc"></option><option value="#cce8cc"></option><option value="#cce0f5"></option><option value="#ebd6ff"></option><option value="#bbbbbb"></option><option value="#f06666"></option><option value="#ffc266"></option><option value="#ffff66"></option><option value="#66b966"></option><option value="#66a3e0"></option><option value="#c285ff"></option><option value="#888888"></option><option value="#a10000"></option><option value="#b26b00"></option><option value="#b2b200"></option><option value="#006100"></option><option value="#0047b2"></option><option value="#6b24b2"></option><option value="#444444"></option><option value="#5c0000"></option><option value="#663d00"></option><option value="#666600"></option><option value="#003700"></option><option value="#002966"></option><option value="#3d1466"></option></select></span><span class="ql-formats"><button type="button" class="ql-link"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line> <path class="ql-even ql-stroke" d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path> <path class="ql-even ql-stroke" d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path> </svg></button><button type="button" class="ql-image"><svg viewBox="0 0 18 18"> <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect> <circle class="ql-fill" cx="6" cy="7" r="1"></circle> <polyline class="ql-even ql-fill" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline> </svg></button><button type="button" class="ql-video"><svg viewBox="0 0 18 18"> <rect class="ql-stroke" height="12" width="12" x="3" y="3"></rect> <rect class="ql-fill" height="12" width="1" x="5" y="3"></rect> <rect class="ql-fill" height="12" width="1" x="12" y="3"></rect> <rect class="ql-fill" height="2" width="8" x="5" y="8"></rect> <rect class="ql-fill" height="1" width="3" x="3" y="5"></rect> <rect class="ql-fill" height="1" width="3" x="3" y="7"></rect> <rect class="ql-fill" height="1" width="3" x="3" y="10"></rect> <rect class="ql-fill" height="1" width="3" x="3" y="12"></rect> <rect class="ql-fill" height="1" width="3" x="12" y="5"></rect> <rect class="ql-fill" height="1" width="3" x="12" y="7"></rect> <rect class="ql-fill" height="1" width="3" x="12" y="10"></rect> <rect class="ql-fill" height="1" width="3" x="12" y="12"></rect> </svg></button></span><span class="ql-formats"><button type="button" class="ql-clean"><svg class="" viewBox="0 0 18 18"> <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line> <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line> <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line> <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line> <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2" y="14"></rect> </svg></button></span></div><div id="quill-container" class="ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" spellcheck="false"><p><strong><u>بطلدازرو،ااا     ش</u></strong></p></div><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: -1px; pointer-events: none; z-index: auto;" class="cGcvT"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="mix-blend-mode: darken; position: absolute; top: 0px; left: -1px; pointer-events: none; z-index: auto;" class="cGcvT"></grammarly-extension><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <!----></div></div><div class="offset-md-1 col-12"><button type="submit" class="btn auth-btn mb-3 btn-comment btn-inverse">
+                    Add Comment
+                    <span role="status" class="spinner-border spinner-border-sm" style="display: none;"><span class="sr-only">Small Spinner</span></span></button></div></div></form></div><div role="tabpanel" aria-hidden="true" class="tab-pane" id="__BVID__341" aria-labelledby="__BVID__341___BV_tab_button__" style="display: none;"><div class="padding-10"><div class="row"><div class="col-md-12"><div class="filename text-center"><p><a href="https://is2host.com/tasks-api/upload_files/2046/read_dis_copun.php" target="_blank"><button download="" class="download">
+                          upload_files/2046/read_dis_copun.php
+                          <span class="glyphicon glyphicon-download-alt"></span></button></a></p><p>محمود الزيادي</p><p>2022-04-03 16:44:17</p></div><div class="filename text-center"><p><a href="https://is2host.com/tasks-api/upload_files/2046/read_dis_copun.php" target="_blank"><button download="" class="download">
+                          upload_files/2046/read_dis_copun.php
+                          <span class="glyphicon glyphicon-download-alt"></span></button></a></p><p>محمود الزيادي</p><p>2022-04-03 16:44:21</p></div><div class="filename text-center"><p><a href="https://is2host.com/tasks-api/upload_files/2046/search_dis_copun.php" target="_blank"><button download="" class="download">
+                          upload_files/2046/search_dis_copun.php
+                          <span class="glyphicon glyphicon-download-alt"></span></button></a></p><p>محمود الزيادي</p><p>2022-04-03 16:44:21</p></div><div class="emptymessage text-danger" style="display: none;">
+                    
+                  </div></div></div></div><div class="container"><div class="row justify-content-center"><div class="col-md-12"><div class="card card-default"><div class="card-header">
+                      Drop or attach relevant files here
+                    </div><div class="card-body"><div class="row"><form style="display: inline-flex; width: 100%;"><div class="col-md-9"><input type="file" multiple="multiple" class="form-control taskfileupload"></div><div class="col-md-3"><button class="btn btn-success btn-block">
+                              Upload File
+                              <span role="status" class="spinner-border spinner-border-sm" style="display: none;"><span class="sr-only">Small Spinner</span></span></button><p style="display: none;"></p></div></form></div></div></div></div></div></div></div><div role="tabpanel" aria-hidden="true" class="tab-pane" id="__BVID__343" aria-labelledby="__BVID__343___BV_tab_button__" style="display: none;"><div class="row"><div class="col-9"><h5 class=" dashboard"><span class="fw-semi-bold"> (طلب عميل محل احزيه اسكندريه  27692) SubTasks </span></h5></div><div class="col-3"><a href="https://is2host.com/albadr-tasks/#/app/tasks/Add?task_id=2046" class="btn btn-primary btn-md btn-addtask" variant="primary" target="_self">
+                  Add Subtask
+                </a></div></div><div class="row"><div class="col-12"><div role="alert" aria-live="polite" aria-atomic="true" class="alert font-weight-normal text-danger text-center"><!---->
+                  There Is No SubTask For This Task 
+                </div></div><div class="col-12"><section class="widget" style="display: none;"><!----><!----><!----><!----><div class="widgetBody widget-body widget-table-overflow"><div xs="12" class="col"><div class="table-responsive"><table class="table table-striped table-lg mb-0 requests-table"><thead><tr class="text-muted"><th>TASK ID</th><th>TASK NAME</th><th>EMPLOYEE NAME</th><th>STATUS</th><th>PRIORITY</th><th>STARTS AT</th><th>ENDS AT</th><th class="text-center">Edit</th></tr></thead><tbody><tr><td colspan="10"><div class="d-flex justify-content-center mb-3"><span larg="" role="status" class="spinner-border text-primary" style="display: none;"><span class="sr-only">Small Spinner</span></span></div></td></tr></tbody></table></div></div><div class="w-100"></div><div xs="12" class="col"><div class="overflow-auto"><div class="mt-3"><div class="text-center"><ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination justify-content-center"><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li><!----><!----><li role="presentation" class="page-item"><button role="menuitemradio" type="button" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="1" tabindex="0" class="page-link">1</button></li><!----><!----><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li></ul></div></div></div></div></div></section></div></div></div><div role="tabpanel" aria-hidden="true" class="tab-pane" id="__BVID__351" aria-labelledby="__BVID__351___BV_tab_button__" style="display: none;"><div class="row"><div class="col-9"><h5 class="dashboard"><span class="fw-semi-bold">
+                    (طلب عميل محل احزيه اسكندريه  27692)Test Cases
+                  </span></h5></div><div class="col-3"><button type="button" class="btn btn btn-primary btn-md btn-addtask btn-primary">Add Test Case
+                </button></div></div><div class="row"><div class="col-12"><div role="alert" aria-live="polite" aria-atomic="true" class="alert font-weight-normal text-danger text-center"><!---->
+                  There Is No Test Cases For This Task 
+                </div></div><div class="col-12"><section class="widget" style="display: none;"><!----><!----><!----><!----><div class="widgetBody widget-body widget-table-overflow"><div xs="12" class="col"><div class="table-responsive"><table class="table table-striped table-lg mb-0 requests-table"><thead><tr class="text-muted"><th class="text-center">#</th><th class="text-center">TITLE</th><th class="text-center">TEST CASE DESCRIPTION</th><th class="text-center">TEST CASE TYPE</th><th class="text-center">STATUS</th><th class="text-center">CREATED BY</th><th class="text-center">CREATED AT</th><th class="text-center">RUN</th><th class="text-center">EDIT</th><th class="text-center">DELETE</th></tr></thead><tbody><tr><td colspan="10"><div class="d-flex justify-content-center mb-3"><span larg="" role="status" class="spinner-border text-primary" style="display: none;"><span class="sr-only">Small Spinner</span></span></div></td></tr></tbody></table></div></div><div class="w-100"></div><div xs="12" class="col"><div class="overflow-auto"><div class="mt-3"><div class="text-center"><ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination justify-content-center"><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li><!----><!----><li role="presentation" class="page-item"><button role="menuitemradio" type="button" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="1" tabindex="0" class="page-link">1</button></li><!----><!----><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li></ul></div></div></div></div></div></section></div></div></div><!----><div role="tabpanel" aria-hidden="true" class="tab-pane" id="__BVID__357" aria-labelledby="__BVID__357___BV_tab_button__" style="display: none;"><div class="row"><div class="col-9"><h5 class="dashboard"><span class="fw-semi-bold"> طلب عميل محل احزيه اسكندريه  27692 Runs </span></h5></div></div><div class="row"><div class="col-12"><div role="alert" aria-live="polite" aria-atomic="true" class="alert font-weight-normal text-danger text-center"><!---->
+                  There Is No Runs For This Task 
+                </div></div><div class="col-12"><section class="widget" style="display: none;"><!----><!----><!----><!----><div class="widgetBody widget-body widget-table-overflow"><div class="table-responsive"><table class="table table-striped table-lg mb-0 requests-table"><thead><tr class="text-muted"><th class="text-center">#</th><th class="text-center">RUN ID</th><th class="text-center">RUN TIME</th><th class="text-center">TEST DATA</th><th class="text-center">TYPE</th><th class="text-center">ACTUAL RESULT</th><th class="text-center">BUG</th></tr></thead><tbody></tbody></table></div><div class="w-100"></div><div xs="12" class="col"><div class="overflow-auto"><div class="mt-3"><div class="text-center"><ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination justify-content-center"><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li><!----><!----><li role="presentation" class="page-item"><button role="menuitemradio" type="button" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="1" tabindex="0" class="page-link">1</button></li><!----><!----><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li><li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li></ul></div></div></div></div></div></section></div></div></div><!----></div></div></div><!----><!----><!----><!----><!----><!----><!----></div></section></div><footer class="contentFooter">
+        Al-Badr Managment Dashboard  Designed By <a href="https://www.albadrsystems.com/ar/" rel="nofollow noopener noreferrer" target="_blank">AlBadr Smart Systems</a></footer></div></div></div><script src="./Al-Badr Managment Dashboard_files/chunk-vendors.60486e93.js"></script><script src="./Al-Badr Managment Dashboard_files/app.a22d1731.js"></script><div id="hpaxZkC1H" role="status" aria-live="polite" aria-atomic="false"></div><script>// Initialize Firebase
+// var FBCONFIG = {
+//   apiKey: "AIzaSyD9YrHKCrVJEH-ZhBMPi5_OyAJJmRhTpzo",
+//   authDomain: "kayan-1f468.firebaseapp.com",
+//   databaseURL: "https://kayan-1f468.firebaseio.com",
+//   messagingSenderId: "420077607270",
+//   projectId: 'kayan-1f468', 
+//   appId: '1:420077607270:web:cc4afb988d8ae6026e10a7',
+//   storageBucket: "kayan-1f468.appspot.com",
+//   measurementId: "G-3RR4WBPNBR"
+// };
+// firebase.initializeApp(FBCONFIG);
+
+// const messaging = firebase.messaging();
+
+// navigator.serviceWorker.register('service-worker.js')
+// .then((registration) => {
+//   messaging.useServiceWorker(registration);
+// })
+
+// messaging.requestPermission()
+// .then(function() {
+//   console.log('Notification permission granted.');
+//   return messaging.getToken();
+
+// })
+// .then(function(token) {
+//   console.log(token); // Display user token
+// })
+// .catch(function(err) { // Happen if user deney permission
+//   console.log('Unable to get permission to notify.', err);
+// });
+
+// messaging.onMessage(function(payload){
+// 	console.log('onMessage',payload);
+// })</script><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><grammarly-popups data-grammarly-shadow-root="true" class="cGcvT"></grammarly-popups></html>
