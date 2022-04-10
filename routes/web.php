@@ -30,7 +30,6 @@ Route::get('/', function () {
 });
 
 
-
 // dashboard routes
 Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'auth:admin'], function () {
     Route::get('/', DashboardController::class)->name('index');
@@ -44,49 +43,49 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     });
 
     Route::group(['middleware' => 'auth:admin'], function () {
-        Route::get('/', [AdminController::class, 'index'])->middleware('permission:Show Managers')->name('index');
-        Route::get('/create', [AdminController::class, 'create'])->middleware('permission:Add Managers')->name('create');
-        Route::post('/store', [AdminController::class, 'store'])->middleware('permission:Add Managers')->name('store');
-        Route::get('/edit/{id}', [AdminController::class, 'edit'])->middleware('permission:Edit Managers')->name('edit');
-        Route::post('/update', [AdminController::class, 'update'])->middleware('permission:Edit Managers')->name('update');
-        Route::post('/destroy', [AdminController::class, 'destroy'])->middleware('permission:Delete Managers')->name('destroy');
+        Route::get('/', [AdminController::class, 'index'])->name('index');
+        Route::get('/create', [AdminController::class, 'create'])->name('create');
+        Route::post('/store', [AdminController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
+        Route::post('/update', [AdminController::class, 'update'])->name('update');
+        Route::post('/destroy', [AdminController::class, 'destroy'])->name('destroy');
     });
 });
 
 // user routes
 Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => 'auth:admin'], function () {
-    Route::get('/', [UserController::class, 'index'])->middleware('permission:Show Users')->name('index');
-    Route::get('/create', [UserController::class, 'create'])->middleware('permission:Add Users')->name('create');
-    Route::post('/store', [UserController::class, 'store'])->middleware('permission:Add Users')->name('store');
-    Route::get('/edit/{id}', [UserController::class, 'edit'])->middleware('permission:Edit Users')->name('edit');
-    Route::post('/update', [UserController::class, 'update'])->middleware('permission:Edit Users')->name('update');
-    Route::post('/destroy', [UserController::class, 'destroy'])->middleware('permission:Delete Users')->name('destroy');
+    Route::get('/', [UserController::class, 'index'])->name('index');
+    Route::get('/create', [UserController::class, 'create'])->name('create');
+    Route::post('/store', [UserController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+    Route::post('/update', [UserController::class, 'update'])->name('update');
+    Route::post('/destroy', [UserController::class, 'destroy'])->name('destroy');
 });
 
 // roles & permissions routes
 Route::group(['prefix' => 'role', 'as' => 'role.', 'middleware' => 'auth:admin'], function () {
-    Route::get('/', [RoleController::class, 'index'])->middleware('permission:Show Roles And Permissions')->name('index');
-    Route::get('/create', [RoleController::class, 'create'])->middleware('permission:Add Roles And Permissions')->name('create');
-    Route::post('/store', [RoleController::class, 'store'])->middleware('permission:Add Roles And Permissions')->name('store');
-    Route::get('/edit/{id}', [RoleController::class, 'edit'])->middleware('permission:Edit Roles And Permissions')->name('edit');
-    Route::post('/update', [RoleController::class, 'update'])->middleware('permission:Edit Roles And Permissions')->name('update');
-    Route::post('/destroy', [RoleController::class, 'destroy'])->middleware('permission:Delete Roles And Permissions')->name('destroy');
+    Route::get('/', [RoleController::class, 'index'])->name('index');
+    Route::get('/create', [RoleController::class, 'create'])->name('create');
+    Route::post('/store', [RoleController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [RoleController::class, 'edit'])->name('edit');
+    Route::post('/update', [RoleController::class, 'update'])->name('update');
+    Route::post('/destroy', [RoleController::class, 'destroy'])->name('destroy');
 });
 
 // pharmacies routes
 Route::group(['prefix' => 'pharmacy', 'as' => 'pharmacy.', 'middleware' => 'auth:admin'], function () {
-    Route::get('/', [PharmacyController::class, 'index'])->middleware('permission:Show Pharmacies')->name('index');
-    Route::get('/create', [PharmacyController::class, 'create'])->middleware('permission:Add Pharmacies')->name('create');
-    Route::post('/store', [PharmacyController::class, 'store'])->middleware('permission:Add Pharmacies')->name('store');
-    Route::get('/edit/{id}', [PharmacyController::class, 'edit'])->middleware('permission:Edit Pharmacies')->name('edit');
-    Route::post('/update', [PharmacyController::class, 'update'])->middleware('permission:Edit Pharmacies')->name('update');
-    Route::post('/destroy', [PharmacyController::class, 'destroy'])->middleware('permission:Delete Pharmacies')->name('destroy');
+    Route::get('/', [PharmacyController::class, 'index'])->name('index');
+    Route::get('/create', [PharmacyController::class, 'create'])->name('create');
+    Route::post('/store', [PharmacyController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [PharmacyController::class, 'edit'])->name('edit');
+    Route::post('/update', [PharmacyController::class, 'update'])->name('update');
+    Route::post('/destroy', [PharmacyController::class, 'destroy'])->name('destroy');
 });
 
 // timetable routes
 Route::group(['prefix' => 'timetable', 'as' => 'timetable.', 'middleware' => 'auth:admin'], function () {
-    Route::get('/', [TimetableController::class, 'index'])->middleware('permission:Add Timetables')->name('index');
-    Route::post('/store', [TimetableController::class, 'store'])->middleware('permission:Add Timetables')->name('store');
+    Route::get('/', [TimetableController::class, 'index'])->name('index');
+    Route::post('/store', [TimetableController::class, 'store'])->name('store');
     Route::post('/generate-dates-range', [TimetableController::class, 'getDatesRange'])->name('generate-dates-range');
     Route::post('/generate-time-table', [TimetableController::class, 'generateTimeTable'])->name('generate-time-table');
 });

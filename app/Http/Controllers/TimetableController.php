@@ -11,6 +11,12 @@ use Carbon\CarbonPeriod;
 
 class TimetableController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('permission:Add Timetables', ['only' => ['index', 'store']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

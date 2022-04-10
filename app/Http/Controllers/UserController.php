@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
+    public function __construct()
+    {
+        $permissionName = 'Users';
+        $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
+        $this->middleware("permission:Add $permissionName", ['only' => ['create', 'store']]);
+        $this->middleware("permission:Edit $permissionName", ['only' => ['edit','update']]);
+        $this->middleware("permission:Delete $permissionName", ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         $users = User::all();

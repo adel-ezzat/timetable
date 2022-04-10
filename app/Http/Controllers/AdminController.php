@@ -12,6 +12,15 @@ use Spatie\Permission\Models\Role;
 class AdminController extends Controller
 {
 
+    public function __construct()
+    {
+        $permissionName = 'Managers';
+        $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
+        $this->middleware("permission:Add $permissionName", ['only' => ['create', 'store']]);
+        $this->middleware("permission:Edit $permissionName", ['only' => ['edit','update']]);
+        $this->middleware("permission:Delete $permissionName", ['only' => ['destroy']]);
+    }
+
     public function getAllRoles()
     {
         return Role::all()->pluck('name', 'id');
