@@ -13,6 +13,7 @@ class RoleController extends Controller
     public function __construct()
     {
         $permissionName = 'Roles And Permissions';
+        $this->middleware('auth:admin');
         $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
         $this->middleware("permission:Add $permissionName", ['only' => ['create', 'store']]);
         $this->middleware("permission:Edit $permissionName", ['only' => ['edit','update']]);

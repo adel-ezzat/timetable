@@ -210,7 +210,7 @@
     function deleteSelected(id) {
         swalConfirm(function() {
             var ids = getSelected();
-                 request('post', '<?php echo e(route('admin.destroy')); ?>', ids);
+                 request('post', '<?php echo e(route('admin.destroy-ajax')); ?>', ids);
                  deleteRowSelected();
         })
     }
@@ -219,7 +219,7 @@
       function deleteButton(id) {
         swalConfirm(function() {
             var ids = getSelected();
-                 request('post', '<?php echo e(route('admin.destroy')); ?>', {id});
+                 request('post', '<?php echo e(route('admin.destroy-ajax')); ?>', {id});
                  removeRowButton(id);
         })
     }

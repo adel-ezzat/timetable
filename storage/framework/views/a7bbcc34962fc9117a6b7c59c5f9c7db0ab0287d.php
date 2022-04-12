@@ -5,7 +5,7 @@
         <div class="card-body">
             <h4 class="card-title">Edit Role</h4>
          
-            <form method="POST" action="<?php echo e(route('role.update')); ?>">
+            <form method="POST" action="<?php echo e(route('role.update-ajax')); ?>">
                 <?php echo csrf_field(); ?>
 
                 <?php echo e(Form::hidden('id', $role->id)); ?>

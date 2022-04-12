@@ -14,7 +14,8 @@ class TimetableController extends Controller
 
     public function __construct()
     {
-        $this->middleware('permission:Add Timetables', ['only' => ['index', 'store']]);
+        $this->middleware(['permission:Add Timetables', 'auth:admin'], ['only' => ['index', 'store']]);
+        $this->middleware(['auth:web'], ['only' => ['userHome']]);
     }
 
     /**

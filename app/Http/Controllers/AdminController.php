@@ -15,6 +15,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $permissionName = 'Managers';
+        $this->middleware('auth:admin', ['except' => ['login', 'check']]);
         $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
         $this->middleware("permission:Add $permissionName", ['only' => ['create', 'store']]);
         $this->middleware("permission:Edit $permissionName", ['only' => ['edit','update']]);
@@ -82,6 +83,11 @@ class AdminController extends Controller
         $admin->syncRoles($request->input('role_id'));
 
         return redirect()->route('admin.index');
+    }
+
+    public function login()
+    {
+        return view('dashboard.admin.login');
     }
 
     function check(Request $request)

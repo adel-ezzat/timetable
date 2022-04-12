@@ -13,6 +13,7 @@ class UserController extends Controller
     public function __construct()
     {
         $permissionName = 'Users';
+        $this->middleware('auth:admin');
         $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
         $this->middleware("permission:Add $permissionName", ['only' => ['create', 'store']]);
         $this->middleware("permission:Edit $permissionName", ['only' => ['edit','update']]);
@@ -65,7 +66,7 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
-    public function destroy(Request $request)
+    public function destroy1(Request $request)
     {
         $model = User::whereIn('id', $request['data'])->delete();
         if ($model) {

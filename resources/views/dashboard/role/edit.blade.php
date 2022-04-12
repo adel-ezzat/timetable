@@ -6,7 +6,7 @@
         <div class="card-body">
             <h4 class="card-title">Edit Role</h4>
          
-            <form method="POST" action="{{ route('role.update') }}">
+            <form method="POST" action="{{ route('role.update-ajax') }}">
                 @csrf
 
                 {{ Form::hidden('id', $role->id) }}

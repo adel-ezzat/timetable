@@ -7,7 +7,7 @@
         <div class="card-body">
             <h4 class="card-title">Edit User</h4>
 
-            <form method="POST" action="{{ route('user.update') }}">
+            <form method="POST" action="{{ route('user.update-ajax') }}">
                 @csrf
                 <input type="hidden" name="id" value="{{ $user->id }}">
                 <div class="form-group">

@@ -1,13 +1,12 @@
 <?php $__env->startSection('content'); ?>
 <div class="col-12 grid-margin stretch-card">
-    
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Edit User</h4>
+            <h4 class="card-title">Add User</h4>
 
-            <form method="POST" action="<?php echo e(route('user.update')); ?>">
+            <form method="POST" action="<?php echo e(route('user.store')); ?>">
                 <?php echo csrf_field(); ?>
-                <input type="hidden" name="id" value="<?php echo e($user->id); ?>">
+
                 <div class="form-group">
                     <label><?php echo e(__('Name')); ?></label>
                     <input id="name" type="text" class="form-control <?php $__errorArgs = ['name'];
@@ -18,7 +17,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="name"
-                        value="<?php echo e(old('name', $user->name)); ?>" required autocomplete="name" autofocus>
+                        value="<?php echo e(old('name')); ?>" required autocomplete="name" autofocus>
 
                     <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -46,7 +45,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
-                        name="email" value="<?php echo e(old('email', $user->email)); ?>"  autocomplete="email">
+                        name="email" value="<?php echo e(old('email')); ?>" required autocomplete="email">
 
                     <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -74,7 +73,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="password" autocomplete="new-password">
+unset($__errorArgs, $__bag); ?>"
+                        name="password" required autocomplete="new-password">
 
                     <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -95,15 +95,16 @@ unset($__errorArgs, $__bag); ?>
                     <label>
                         <?php echo e(__('Confirm Password')); ?></label>
 
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                        required autocomplete="new-password">
                 </div>
 
 
-                <button type="submit" class="btn btn-primary mr-2">Update</button>
+                <button type="submit" class="btn btn-primary mr-2">Add</button>
             </form>
         </div>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/a/Desktop/timetable/resources/views/dashboard/user/edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/a/Desktop/timetable/resources/views/dashboard/user/create.blade.php ENDPATH**/ ?>

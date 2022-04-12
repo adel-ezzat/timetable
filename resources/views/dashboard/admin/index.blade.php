@@ -211,7 +211,7 @@
     function deleteSelected(id) {
         swalConfirm(function() {
             var ids = getSelected();
-                 request('post', '{{ route('admin.destroy') }}', ids);
+                 request('post', '{{ route('admin.destroy-ajax') }}', ids);
                  deleteRowSelected();
         })
     }
@@ -220,7 +220,7 @@
       function deleteButton(id) {
         swalConfirm(function() {
             var ids = getSelected();
-                 request('post', '{{ route('admin.destroy') }}', {id});
+                 request('post', '{{ route('admin.destroy-ajax') }}', {id});
                  removeRowButton(id);
         })
     }
