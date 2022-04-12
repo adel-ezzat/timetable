@@ -13,13 +13,17 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
 
-    public function __invoke()
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+    public function index()
     {
         $users = User::all()->count();
         $admins = Admin::all()->count();
         $pharmacies = Pharmacy::all()->count();
         $roles = Role::all()->count();
-        $timetables = Timetable::distinct('user_id')->count('user_id');
+        $timetables = Timetable::distinct('date')->count('date');
 
         return view('dashboard.dashboard.index', compact(
             'users',
