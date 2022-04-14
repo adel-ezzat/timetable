@@ -26,9 +26,7 @@ Auth::routes([
 ]);
 
 //home route
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::view('/', 'auth.login')->middleware('guest');
 
 // dashboard routes
 Route::resource('dashboard', DashboardController::class);
