@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Admin\AdminCheckRequest;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
-
+use App\Http\Requests\Admin\AdminStoreRequest;
+use App\Http\Requests\Admin\AdminUpdateRequest;
 
 class AdminController extends Controller
 {
-
     public function __construct()
     {
         $permissionName = 'Managers';
@@ -44,15 +44,8 @@ class AdminController extends Controller
         return view('dashboard.admin.create', compact('roles'));
     }
 
-    public function store(Request $request)
+    public function store(AdminStoreRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|same:password_confirmation',
-            'role_id' => 'required'
-        ]);
-
         $input = $request->all();
         $admin = Admin::create($input);
         $admin->assignRole($request->input('role_id'));
@@ -68,15 +61,8 @@ class AdminController extends Controller
         return view('dashboard.admin.edit', compact('admin', 'currentRole', 'allRolesExceptCurrent'));
     }
 
-    public function update(Request $request)
+    public function update(AdminUpdateRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'sometimes|same:password _confirmation',
-            'role_id' => 'required'
-        ]);
-
         $input = $request->all();
         $admin = Admin::find($request->id);
         $admin->update($input);
@@ -90,15 +76,8 @@ class AdminController extends Controller
         return view('dashboard.admin.login');
     }
 
-    function check(Request $request)
+    function check(AdminCheckRequest $request)
     {
-        $request->validate([
-            'email' => 'required|email|exists:admins,email',
-            'password' => 'required|min:5|max:30'
-        ], [
-            'email.exists' => 'This email is not exists in admins table'
-        ]);
-
         $creds = $request->only('email', 'password');
         Auth::guard('admin')->attempt($creds);
         if (Auth::guard('admin')->attempt($creds)) {
@@ -107,7 +86,6 @@ class AdminController extends Controller
             return redirect()->route('admin.login');
         }
     }
-
 
     public function destroy(Request $request)
     {

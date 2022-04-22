@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Pharmacy;
 use Illuminate\Http\Request;
+use App\Http\Requests\Pharmacy\PharmacyRequest;
 
 use function Symfony\Component\String\b;
 
 class PharmacyController extends Controller
 {
-
     public function __construct()
-    {
+    {        
         $permissionName = 'Pharmacies';
         $this->middleware('auth:admin');
         $this->middleware("permission:Show $permissionName", ['only' => ['index']]);
@@ -47,12 +47,8 @@ class PharmacyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PharmacyRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required'
-        ]);
-
         $input = $request->all();
         Pharmacy::create($input);
         return redirect()->route('pharmacy.index');
@@ -77,18 +73,13 @@ class PharmacyController extends Controller
      * @param  \App\Models\Pharmacy  $pharmacy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(PharmacyRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required'
-        ]);
-
         $input = $request->all();
         $pharmacy = Pharmacy::find($request->id);
         $pharmacy->update($input);
 
         return redirect()->route('pharmacy.index');
-
     }
 
     /**

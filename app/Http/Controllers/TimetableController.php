@@ -8,6 +8,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
+use App\Http\Requests\Timetable\TimetableStoreRequest;
+use App\Http\Requests\Timetable\TimetableDatesRangeRequest;
+use App\Http\Requests\Timetable\TimetableGenerateRequest;
 
 class TimetableController extends Controller
 {
@@ -36,17 +39,9 @@ class TimetableController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TimetableStoreRequest $request)
     {
-        $this->validate($request, [
-            'user_id' => 'required',
-            'pharmacy_id' => 'required',
-            'start_time' => 'required|date_format:H:i',
-            'end_time' => 'required|date_format:H:i|after:start_time',
-            'date' => 'required|date_format:Y-m-d',
-        ]);
-
-
+       
         $from = Carbon::parse($request->start_time);
         $to = Carbon::parse($request->end_time);
         $date =  $request->date;
@@ -55,7 +50,6 @@ class TimetableController extends Controller
             ->whereTime('end_time', '<=', $to)
             ->whereDate('date', '=', $date)
             ->get();
-
 
         if ($timeSlots->count() >= 1) {
             $msg = ['msg' => 'Time slot not available try another range', 'icon' => 'error', 'timeslots' => $timeSlots];
@@ -69,13 +63,8 @@ class TimetableController extends Controller
         return response()->json($msg, 200);
     }
 
-    public function getDatesRange(Request $request)
+    public function getDatesRange(TimetableDatesRangeRequest $request)
     {
-        $request->validate([
-            'from' => 'required|date_format:Y-m-d',
-            'to' => 'required|date_format:Y-m-d|after:from'
-        ]);
-
         $startDate =  $request->from;
         $endDate =  $request->to;
 
@@ -104,15 +93,8 @@ class TimetableController extends Controller
         return view('user.timetable.index', compact( 'pharmacies'));
     }
 
-
-    public function generateTimeTable(Request $request)
+    public function generateTimeTable(TimetableGenerateRequest $request)
     {
-        $request->validate([
-            'from' => 'required|date_format:Y-m-d',
-            'to' => 'required|date_format:Y-m-d|after:from',
-            'pharmacy_id' => 'required'
-        ]);
-
         $startDate = $request->from;
         $endDate = $request->to;
         $pharmacy_id = $request->pharmacy_id;

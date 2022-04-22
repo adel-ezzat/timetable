@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-
-
+use App\Http\Requests\User\UserStoreRequest;
+use App\Http\Requests\User\UserUpdateRequest;
 
 class UserController extends Controller
 {
@@ -31,14 +31,8 @@ class UserController extends Controller
         return view('dashboard.user.create');
     }
 
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:admins,email',
-            'password' => 'required|same:password_confirmation',
-        ]);
-
         $input = $request->all();
         User::create($input);
 
@@ -51,14 +45,8 @@ class UserController extends Controller
         return view('dashboard.user.edit', compact('user'));
     }
 
-     public function update(Request $request)
+     public function update(UserUpdateRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:admins,email',
-            'password' => 'sometimes|same:password_confirmation',
-        ]);
-
         $input = $request->all();
         $user = User::find($request->id);
         $user->update($input);
@@ -66,7 +54,7 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
-    public function destroy1(Request $request)
+    public function destroy(Request $request)
     {
         $model = User::whereIn('id', $request['data'])->delete();
         if ($model) {
@@ -76,7 +64,5 @@ class UserController extends Controller
         }
 
         return response()->json($arr, 200);
-    }
-
-    
+    }   
 }

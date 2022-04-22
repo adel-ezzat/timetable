@@ -1,13 +1,5 @@
 @extends('layouts.app')
 @section('styles')
-<link rel="stylesheet" href="{{ asset('assets/vendors/timetable/timetablejs.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/select2/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/modern-vertical/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendors/timetable/demo.css') }}">
 
 <style>
@@ -93,10 +85,6 @@
 
 @section('scripts')
 <script src="{{ asset('assets/vendors/timetable/timetable.js') }}"></script>
-<script src="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/moment/moment.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js') }}"></script>
-<script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
 
 <script>
     $('#from').datetimepicker({

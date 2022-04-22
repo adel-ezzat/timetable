@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}</title>
+  
         <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
@@ -15,7 +16,7 @@
         <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/modern-vertical/style.css') }}">
-        
+        <link rel="stylesheet" href="{{ asset('assets/vendors/timetable/timetablejs.css') }}">
         <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
         @yield('styles')
     </head>
@@ -52,6 +53,8 @@
         <script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
         <script src="{{ asset('assets/vendors/moment/moment.min.js') }}"></script>
         <script src="{{ asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js') }}"></script>
+        <script src="{{ asset('assets/vendors/timetable/timetable.js') }}"></script>
+
 
         @yield('scripts')
     </body>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
+use App\Http\Requests\Role\RoleUpdateRequest;
+use App\Http\Requests\Role\RoleStoreRequest;
 
 class RoleController extends Controller
 {
@@ -32,7 +34,7 @@ class RoleController extends Controller
         return view('dashboard.role.create', compact('permissions'));
     }
 
-    public function store(Request $request)
+    public function store(RoleStoreRequest $request)
     {
         $this->validate($request, [
             'role' => 'required|unique:roles,name',
@@ -56,20 +58,12 @@ class RoleController extends Controller
         return view('dashboard.role.edit', compact('role', 'permissions', 'rolePermissions'));
     }
 
-    public function update(Request $request)
+    public function update(RoleUpdateRequest $request)
     {
-        $this->validate($request, [
-            'role' => 'required',
-            'id' => 'required',
-            'permission' => 'required'
-        ]);
-
         $role = Role::find($request->id);
         $role->name = $request->input('role');
         $role->save();
         $role->syncPermissions($request->input('permission'));
-        // return redirect()->route('role.index')
-        //     ->with('success', 'Role updated successfully');
         return redirect()->back();
     }
 

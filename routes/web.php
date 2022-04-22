@@ -57,7 +57,7 @@ Route::resource('role', RoleController::class);
 // pharmacies routes
 Route::group(['prefix' => 'pharmacy', 'as' => 'pharmacy.'], function () {
     Route::post('update', [PharmacyController::class, 'update'])->name('update-ajax');
-    // Route::post('destroy', [PharmacyController::class, 'destroy'])->name('destroy-ajax');
+    Route::post('destroy', [PharmacyController::class, 'destroy'])->name('destroy-ajax');
 });
 Route::resource('pharmacy', PharmacyController::class);
 
