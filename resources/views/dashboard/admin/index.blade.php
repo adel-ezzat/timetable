@@ -1,8 +1,4 @@
 @extends('layouts.app')
-@section('styles')
-<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/jquery-toast-plugin/jquery.toast.min.css') }}">
-@endsection
 
 @section('content')
 
@@ -96,11 +92,6 @@
 @endsection
 
 @section('scripts')
-<script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ asset('assets/js/data-table.js') }}"></script>
-<script src="{{ asset('assets/vendors/jquery-toast-plugin/jquery.toast.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/sweetalert/sweetalert.min.js') }}"></script>
 
 <script>
     // toast alert
