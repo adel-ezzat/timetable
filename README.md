@@ -36,4 +36,4 @@ User's credentials: user@user.com - 123456
 
 `http://timetable.i3rby.com/` [here](http://timetable.i3rby.com/).
 
-> by @adelezzatl
+> by @adel-ezzat
